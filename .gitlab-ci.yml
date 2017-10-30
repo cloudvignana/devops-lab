@@ -26,7 +26,7 @@ test:
 pages:
   stage: deploy
   script:
-    - gitbook build . public # build to public path
+    - gitbook build ./java_devops public # build to public path
   artifacts:
     paths:
       - public
