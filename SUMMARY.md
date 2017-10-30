@@ -2,6 +2,7 @@
 
 * [Quick Links](quick-links.md)
 * [Introduction](README.md)
+  * [Objective](intro/self-motivated-devops-training.pptx)
 * [Basics](basics.md)
   * [ssh](basics/ssh.md)
 * [AWS](aws.md)
@@ -12,8 +13,8 @@
   * [Installation](jenkins/docs/installation.md)
   * [Tools Config](jenkins/docs/tools.md)
   * [Jobs Setup](jenkins/docs/jobs-setup.md)
-* [SonarQube](sonarqube.md)
-  * [installation](sonarqube/installation.md)
+* [SonarQube](sonarqube/intro.md)
+  * [Installation](sonarqube/installation.md)
 * [Nexus](nexus.md)
   * [Installation](nexus/installation.md)
 * [Gitlab](gitlab.md)
