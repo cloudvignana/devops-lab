@@ -2,7 +2,7 @@
 
 * [Quick Links](quick-links.md)
 * [Introduction](README.md)
-  * [Objective](intro/self-motivated-devops-training.pptx)
+  * [Objective](intro/objective.html)
 * [Basics](basics/intro.md)
   * [ssh](basics/ssh.md)
 * [AWS](aws/intro.md)
