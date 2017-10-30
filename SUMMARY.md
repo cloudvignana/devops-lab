@@ -1,9 +1,13 @@
 # Summary
 
+* [Quick Links](quick-links.md)
 * [Introduction](README.md)
 * [Basics](basics.md)
   * [ssh](basics/ssh.md)
-* [Quick Links](quick-links.md)
+* [AWS](aws.md)
+  * [Create a Linux VM](aws/create-a-linux-vm.md)
+  * [aws\_key](aws/aws_key.md)
+  * [intro](aws/intro.md)
 * [Jenkins](java-devops/jenkins/installation.md)
   * [Installation](jenkins/docs/installation.md)
   * [Tools Config](jenkins/docs/tools.md)
@@ -12,4 +16,8 @@
   * [installation](sonarqube/installation.md)
 * [Nexus](nexus.md)
   * [Installation](nexus/installation.md)
+* [Gitlab](gitlab.md)
+  * [Info](gitlab/info.md)
+* [Maven](maven.md)
+  * [info](maven/info.md)
 
