@@ -16,7 +16,7 @@ before_script:
 test:
   stage: test
   script:
-    - gitbook build . public # build to public path
+    - gitbook build ./java_devops public # build to public path
   only:
     - branches # this job will affect only the 'master' branch
   except:
