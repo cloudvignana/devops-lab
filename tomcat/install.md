@@ -40,8 +40,7 @@ http://&lt;&lt;ec2-public-DNS&gt;&gt;:8080/
 
 ex: [http://ec2-34-201-62-67.compute-1.amazonaws.com:8080/](http://ec2-34-201-62-67.compute-1.amazonaws.com:8080/)
 
-![](file:///C:/Users/SAIRAM~1/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)
-
+<img src="tomcat-1.png" width="1366" height="768" />
 
 
 \# Shutdown after confirmation
