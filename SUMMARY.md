@@ -21,6 +21,6 @@
   * [Info](gitlab/info.md)
 * [Maven](maven/intro.md)
   * [info](maven/info.md)
-* [Tomcat](tomcat.md)
+* [Tomcat](tomcat/intro.md)
   * [install-steps](tomcat/install.md)
 
