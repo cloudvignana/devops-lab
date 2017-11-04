@@ -2,7 +2,7 @@
 
 * [Quick Links](quick-links.md)
 * [Introduction](README.md)
-  * [Objective](intro/objective.html)
+  * [Objective](intro/objective.md)
 * [Basics](basics/intro.md)
   * [ssh](basics/ssh.md)
 * [AWS](aws/intro.md)
