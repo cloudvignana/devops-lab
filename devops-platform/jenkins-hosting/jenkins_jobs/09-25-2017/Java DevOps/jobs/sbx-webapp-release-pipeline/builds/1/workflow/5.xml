@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.workflow.support.storage.SimpleXStreamFlowNodeStorage_-Tag plugin="workflow-support@2.14">
+  <node class="org.jenkinsci.plugins.workflow.cps.nodes.StepAtomNode" plugin="workflow-cps@2.36.1">
+    <parentIds>
+      <string>4</string>
+    </parentIds>
+    <id>5</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.support.steps.build.BuildTriggerStep</descriptorId>
+  </node>
+  <actions>
+    <org.jenkinsci.plugins.workflow.support.actions.LogActionImpl>
+      <charset>UTF-8</charset>
+    </org.jenkinsci.plugins.workflow.support.actions.LogActionImpl>
+    <org.jenkinsci.plugins.workflow.cps.actions.ArgumentsActionImpl plugin="workflow-cps@2.36.1">
+      <arguments class="linked-hash-map">
+        <entry>
+          <string>job</string>
+          <string>sbx-webapp-release</string>
+        </entry>
+        <entry>
+          <string>parameters</string>
+          <list>
+            <org.jenkinsci.plugins.structs.describable.UninstantiatedDescribable plugin="structs@1.9">
+              <symbol>string</symbol>
+              <arguments class="linked-hash-map">
+                <entry>
+                  <string>name</string>
+                  <string>nexus-release-repo</string>
+                </entry>
+                <entry>
+                  <string>value</string>
+                  <string>http://35.196.118.245:8081/repository/devops-releases/</string>
+                </entry>
+              </arguments>
+            </org.jenkinsci.plugins.structs.describable.UninstantiatedDescribable>
+          </list>
+        </entry>
+      </arguments>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </org.jenkinsci.plugins.workflow.cps.actions.ArgumentsActionImpl>
+    <org.jenkinsci.plugins.workflow.actions.LabelAction plugin="workflow-api@2.18">
+      <displayName>Building Java DevOps » sbx-webapp-release</displayName>
+    </org.jenkinsci.plugins.workflow.actions.LabelAction>
+    <org.jenkinsci.plugins.workflow.actions.TimingAction plugin="workflow-api@2.18">
+      <startTime>1505032626229</startTime>
+    </org.jenkinsci.plugins.workflow.actions.TimingAction>
+    <org.jenkinsci.plugins.workflow.actions.ErrorAction plugin="workflow-api@2.18">
+      <error class="hudson.AbortException">
+        <detailMessage>Java DevOps » sbx-webapp-release #10 completed with status FAILURE (propagate: false to ignore)</detailMessage>
+        <stackTrace>
+          <trace>org.jenkinsci.plugins.workflow.support.steps.build.BuildTriggerListener.onCompleted(BuildTriggerListener.java:53)</trace>
+          <trace>hudson.model.listeners.RunListener.fireCompleted(RunListener.java:211)</trace>
+          <trace>hudson.model.Run.execute(Run.java:1780)</trace>
+          <trace>hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)</trace>
+          <trace>hudson.model.ResourceController.execute(ResourceController.java:97)</trace>
+          <trace>hudson.model.Executor.run(Executor.java:415)</trace>
+        </stackTrace>
+        <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+          <c class="list"/>
+          <list reference="../c"/>
+        </suppressedExceptions>
+      </error>
+    </org.jenkinsci.plugins.workflow.actions.ErrorAction>
+  </actions>
+</org.jenkinsci.plugins.workflow.support.storage.SimpleXStreamFlowNodeStorage_-Tag>

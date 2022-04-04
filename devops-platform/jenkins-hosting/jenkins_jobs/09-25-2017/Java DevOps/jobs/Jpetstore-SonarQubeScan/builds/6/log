@@ -1,0 +1,84 @@
+Started by user [8mha:////4EubDzcc5+rlsLvkKzUGX9HGHvL3A7UoTK0UQk+uhfcJAAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYR/dLi1CL9lNSy/ILi+KzUvOzMvGIAwgdRX8kAAAA=[0mDevOps Jenkins
+Building remotely on [8mha:////4MAZxWbffkyz1ImCZoKHl+nf69iy/LCs6qiu27zTGNrbAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/eT83ILSktQi/cTyYt3UZCNdoNWlFbrFOYllqbqGAKMcMzPUAAAA[0maws-ec2-linux-slave-1 in workspace /opt/jenkins/workspace/Java DevOps/Jpetstore-SonarQubeScan
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://gitlab.com/sairamkrishna1235/foss.git # timeout=10
+Fetching upstream changes from https://gitlab.com/sairamkrishna1235/foss.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://gitlab.com/sairamkrishna1235/foss.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision ee7912fa231bb1dd69623582024a482748fe0387 (refs/remotes/origin/master)
+Commit message: "Initial release"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ee7912fa231bb1dd69623582024a482748fe0387
+ > git rev-list ee7912fa231bb1dd69623582024a482748fe0387 # timeout=10
+[Jpetstore-SonarQubeScan] $ /opt/tools/sonar_runner/sonar-runner-2.4/bin/sonar-runner -e -Dsonar.host.url=http://ec2-52-90-165-29.compute-1.amazonaws.com:9000 ******** -Dsonar.projectName=foss35 -Dsonar.login=admin -Dsonar.projectVersion=1.0 -Dsonar.password=admin -Dsonar.projectKey=foss35 "-Dsonar.projectBaseDir=/opt/jenkins/workspace/Java DevOps/Jpetstore-SonarQubeScan"
+SonarQube Runner 2.4
+Java 1.8.0_131 Oracle Corporation (64-bit)
+Linux 3.10.0-514.21.2.el7.x86_64 amd64
+INFO: Error stacktraces are turned on.
+INFO: Runner configuration file: /opt/tools/sonar_runner/sonar-runner-2.4/conf/sonar-runner.properties
+INFO: Project configuration file: NONE
+INFO: Default locale: "en_US", source code encoding: "UTF-8"
+INFO: Work directory: /opt/jenkins/workspace/Java DevOps/Jpetstore-SonarQubeScan/.sonar
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION FAILURE
+INFO: ------------------------------------------------------------------------
+Total time: 1:00.207s
+Final Memory: 0M/15M
+INFO: ------------------------------------------------------------------------
+ERROR: Error during Sonar runner execution
+org.sonar.runner.kevinsawicki.HttpRequest$HttpRequestException: java.net.SocketTimeoutException: Read timed out
+	at org.sonar.runner.kevinsawicki.HttpRequest.code(HttpRequest.java:1392)
+	at org.sonar.runner.kevinsawicki.HttpRequest.ok(HttpRequest.java:1417)
+	at org.sonar.runner.impl.ServerConnection.downloadString(ServerConnection.java:93)
+	at org.sonar.runner.impl.ServerVersion.downloadVersion(ServerVersion.java:47)
+	at org.sonar.runner.impl.ServerVersion.version(ServerVersion.java:38)
+	at org.sonar.runner.impl.ServerVersion.is37Compatible(ServerVersion.java:58)
+	at org.sonar.runner.impl.JarDownloader.checkVersionAndDownload(JarDownloader.java:36)
+	at org.sonar.runner.impl.BatchLauncher$1.run(BatchLauncher.java:71)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.sonar.runner.impl.BatchLauncher.doExecute(BatchLauncher.java:69)
+	at org.sonar.runner.impl.BatchLauncher.execute(BatchLauncher.java:50)
+	at org.sonar.runner.api.EmbeddedRunner.doExecute(EmbeddedRunner.java:102)
+	at org.sonar.runner.api.Runner.execute(Runner.java:100)
+	at org.sonar.runner.Main.executeTask(Main.java:70)
+	at org.sonar.runner.Main.execute(Main.java:59)
+	at org.sonar.runner.Main.main(Main.java:53)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1926)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1921)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1920)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1490)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at org.sonar.runner.kevinsawicki.HttpRequest.code(HttpRequest.java:1390)
+	... 15 more
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:735)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:678)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1569)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderField(HttpURLConnection.java:2982)
+	at org.sonar.runner.kevinsawicki.HttpRequest.header(HttpRequest.java:1903)
+	at org.sonar.runner.kevinsawicki.HttpRequest.contentType(HttpRequest.java:2308)
+	at org.sonar.runner.impl.ServerConnection.downloadString(ServerConnection.java:89)
+	... 13 more
+ERROR: 
+ERROR: Re-run SonarQube Runner using the -X switch to enable full debug logging.
+ERROR: SonarQube scanner exited with non-zero code: 1
+[8mha:////4Nq+OXHc341blyoONIwhGGTxuquw8+9S7msFkIge88jLAAAAVx+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0mV3NWzufebKBsTA0NFEYMUmgZnCA1SyAABjCCFBQC2xNaiYAAAAA==[0mFinished: FAILURE

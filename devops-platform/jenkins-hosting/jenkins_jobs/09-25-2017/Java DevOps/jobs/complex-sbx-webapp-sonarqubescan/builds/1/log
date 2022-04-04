@@ -1,0 +1,118 @@
+Started by user [8mha:////4EubDzcc5+rlsLvkKzUGX9HGHvL3A7UoTK0UQk+uhfcJAAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYR/dLi1CL9lNSy/ILi+KzUvOzMvGIAwgdRX8kAAAA=[0mDevOps Jenkins
+Building remotely on [8mha:////4MAZxWbffkyz1ImCZoKHl+nf69iy/LCs6qiu27zTGNrbAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/eT83ILSktQi/cTyYt3UZCNdoNWlFbrFOYllqbqGAKMcMzPUAAAA[0maws-ec2-linux-slave-1 in workspace /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan
+Cloning the remote Git repository
+Cloning repository https://gitlab.com/devlabs35/sonarqube-sbx.git
+ > git init /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan # timeout=10
+Fetching upstream changes from https://gitlab.com/devlabs35/sonarqube-sbx.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://gitlab.com/devlabs35/sonarqube-sbx.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://gitlab.com/devlabs35/sonarqube-sbx.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://gitlab.com/devlabs35/sonarqube-sbx.git # timeout=10
+Fetching upstream changes from https://gitlab.com/devlabs35/sonarqube-sbx.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://gitlab.com/devlabs35/sonarqube-sbx.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 72cc88d6083ba1ba91e9e31932ba54a9b9c58602 (refs/remotes/origin/master)
+Commit message: "sonarscan via maven "
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 72cc88d6083ba1ba91e9e31932ba54a9b9c58602
+First time build. Skipping changelog.
+[complex-sbx-webapp-sonarqubescan] $ /opt/tools/sonar_runner/sonar-runner-2.4/bin/sonar-runner -e -Dsonar.host.url=http://ec2-52-90-165-29.compute-1.amazonaws.com:9000 ******** -Dsonar.projectName=sonarqube-sbx-java -Dsonar.login=admin -Dsonar.projectVersion=2.0 "-Dsonar.profile=Sonar way" -Dsonar.password=admin -Dsonar.projectKey=net.devops.training -Dsonar.host.url=http://ec2-54-166-136-126.compute-1.amazonaws.com:9000 -Dsonar.sources=. "-Dsonar.projectBaseDir=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan"
+SonarQube Runner 2.4
+Java 1.8.0_144 Oracle Corporation (64-bit)
+Linux 3.10.0-514.21.2.el7.x86_64 amd64
+INFO: Error stacktraces are turned on.
+INFO: Runner configuration file: /opt/tools/sonar_runner/sonar-runner-2.4/conf/sonar-runner.properties
+INFO: Project configuration file: NONE
+INFO: Default locale: "en_US", source code encoding: "UTF-8"
+INFO: Work directory: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/.sonar
+INFO: SonarQube Server 6.0
+19:25:48.391 INFO  - Load global repositories
+19:25:48.754 INFO  - Load global repositories (done) | time=365ms
+19:25:48.799 INFO  - User cache: /home/ec2-user/.sonar/cache
+19:25:49.089 INFO  - Load plugins index
+19:25:49.097 INFO  - Load plugins index (done) | time=8ms
+19:25:49.587 INFO  - Process project properties
+19:25:49.775 INFO  - Load project repositories
+19:25:49.808 INFO  - Load project repositories (done) | time=33ms
+19:25:49.885 INFO  - Load quality profiles
+19:25:49.885 WARN  - Ability to set quality profile from command line using 'sonar.profile' is deprecated and will be dropped in a future SonarQube version. Please configure quality profile used by your project on SonarQube server.
+19:25:50.066 INFO  - Load quality profiles (done) | time=181ms
+19:25:50.071 INFO  - Load active rules
+19:25:51.278 INFO  - Load active rules (done) | time=1207ms
+19:25:51.314 INFO  - Publish mode
+19:25:51.315 INFO  - -------------  Scan sonarqube-sbx-java
+19:25:51.452 INFO  - Load server rules
+19:25:51.759 INFO  - Load server rules (done) | time=307ms
+19:25:51.904 INFO  - Base dir: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan
+19:25:51.904 INFO  - Working dir: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/.sonar
+19:25:51.905 INFO  - Source paths: .
+19:25:51.905 INFO  - Source encoding: UTF-8, default locale: en_US
+19:25:51.905 INFO  - Index files
+19:25:51.962 INFO  - 4 files indexed
+19:25:51.968 INFO  - Quality profile for java: Sonar way
+19:25:52.882 INFO  - Sensor Lines Sensor
+19:25:52.898 INFO  - Sensor Lines Sensor (done) | time=16ms
+19:25:52.898 INFO  - Sensor JavaSquidSensor
+19:25:53.348 INFO  - Configured Java source version (sonar.java.source): none
+19:25:53.372 INFO  - JavaClasspath initialization
+19:25:53.372 WARN  - Bytecode of dependencies was not provided for analysis of source files, you might end up with less precise results. Bytecode can be provided using sonar.java.libraries property
+19:25:53.372 INFO  - JavaClasspath initialization (done) | time=0ms
+19:25:53.373 INFO  - JavaTestClasspath initialization
+19:25:53.373 WARN  - Bytecode of dependencies was not provided for analysis of test files, you might end up with less precise results. Bytecode can be provided using sonar.java.test.libraries property
+19:25:53.373 INFO  - JavaTestClasspath initialization (done) | time=0ms
+19:25:53.937 INFO  - Java Main Files AST scan
+19:25:53.938 INFO  - 4 source files to be analyzed
+19:25:54.863 INFO  - Java Main Files AST scan (done) | time=926ms
+19:25:54.863 WARN  - Java bytecode has not been made available to the analyzer. The  are disabled.
+19:25:54.863 INFO  - Java Test Files AST scan
+19:25:54.863 INFO  - 0 source files to be analyzed
+19:25:54.876 INFO  - Java Test Files AST scan (done) | time=13ms
+19:25:54.876 INFO  - Sensor JavaSquidSensor (done) | time=1978ms
+19:25:54.876 INFO  - Sensor SCM Sensor
+19:25:54.877 INFO  - SCM provider for this project is: git
+19:25:54.889 INFO  - 4 files to be analyzed
+19:25:54.886 INFO  - 4/4 source files have been analyzed
+19:25:54.900 INFO  - 0/0 source files have been analyzed
+19:25:55.311 INFO  - 4/4 files analyzed
+19:25:55.312 INFO  - Sensor SCM Sensor (done) | time=436ms
+19:25:55.312 INFO  - Sensor SurefireSensor
+19:25:55.312 INFO  - parsing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/target/surefire-reports
+19:25:55.313 INFO  - Sensor SurefireSensor (done) | time=1ms
+19:25:55.313 INFO  - Sensor JaCoCoSensor
+19:25:55.313 INFO  - JaCoCoSensor: JaCoCo report not found : /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/target/jacoco.exec
+19:25:55.313 INFO  - Sensor JaCoCoSensor (done) | time=0ms
+19:25:55.313 INFO  - Sensor JaCoCoItSensor
+19:25:55.313 INFO  - JaCoCoItSensor: JaCoCo IT report not found: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/target/jacoco-it.exec
+19:25:55.313 INFO  - Sensor JaCoCoItSensor (done) | time=0ms
+19:25:55.313 INFO  - Sensor JaCoCoOverallSensor
+19:25:55.313 INFO  - Sensor JaCoCoOverallSensor (done) | time=0ms
+19:25:55.313 INFO  - Sensor XmlFileSensor
+19:25:55.313 INFO  - Sensor XmlFileSensor (done) | time=0ms
+19:25:55.313 INFO  - Sensor Zero Coverage Sensor
+19:25:55.341 INFO  - Sensor Zero Coverage Sensor (done) | time=28ms
+19:25:55.341 INFO  - Sensor Code Colorizer Sensor
+19:25:55.341 INFO  - Sensor Code Colorizer Sensor (done) | time=0ms
+19:25:55.342 INFO  - Sensor CPD Block Indexer
+19:25:55.342 INFO  - JavaCpdBlockIndexer is used for java
+19:25:55.386 INFO  - Sensor CPD Block Indexer (done) | time=44ms
+19:25:55.387 INFO  - Calculating CPD for 0 files
+19:25:55.400 INFO  - CPD calculation finished
+19:25:55.521 INFO  - Analysis report generated in 119ms, dir size=17 KB
+19:25:55.544 INFO  - Analysis reports compressed in 23ms, zip size=11 KB
+19:25:56.152 INFO  - Analysis report uploaded in 608ms
+19:25:56.152 INFO  - ANALYSIS SUCCESSFUL, you can browse http://ec2-54-166-136-126.compute-1.amazonaws.com:9000/dashboard/index/net.devops.training
+19:25:56.152 INFO  - Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+19:25:56.152 INFO  - More about the report processing at http://ec2-54-166-136-126.compute-1.amazonaws.com:9000/api/ce/task?id=AV67XIPqjtwJe5VnzPpJ
+19:25:56.162 INFO  - Task total time: 6.927 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+Total time: 9.053s
+Final Memory: 13M/108M
+INFO: ------------------------------------------------------------------------
+Triggering a new build of [8mha:////4H/p/wiQ/dFTzzIyVh3dF44kAjswNtDJSqc+G9NrjEd3AAAAsh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyFEgYt/az8JH0voDmqRgYuqWX+BcVgkeKkCt3y1KTEggLdotSc1MTiVH0An1xZh98AAAA=[0mJava DevOps » sbx-webapp-release
+Finished: SUCCESS

@@ -1,0 +1,44 @@
+Started by user [8mha:////4EubDzcc5+rlsLvkKzUGX9HGHvL3A7UoTK0UQk+uhfcJAAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYR/dLi1CL9lNSy/ILi+KzUvOzMvGIAwgdRX8kAAAA=[0mDevOps Jenkins
+Building remotely on [8mha:////4MAZxWbffkyz1ImCZoKHl+nf69iy/LCs6qiu27zTGNrbAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/eT83ILSktQi/cTyYt3UZCNdoNWlFbrFOYllqbqGAKMcMzPUAAAA[0maws-ec2-linux-slave-1 in workspace /opt/jenkins/workspace/Java DevOps/Jpetstore-Release
+Cloning the remote Git repository
+Cloning repository https://gitlab.com/sairamkrishna1235/foss.git
+ > git init /opt/jenkins/workspace/Java DevOps/Jpetstore-Release # timeout=10
+Fetching upstream changes from https://gitlab.com/sairamkrishna1235/foss.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://gitlab.com/sairamkrishna1235/foss.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://gitlab.com/sairamkrishna1235/foss.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://gitlab.com/sairamkrishna1235/foss.git # timeout=10
+Fetching upstream changes from https://gitlab.com/sairamkrishna1235/foss.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://gitlab.com/sairamkrishna1235/foss.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision a4be9c923f4740ff6d2c79b42e2201e3926ffa89 (refs/remotes/origin/master)
+Commit message: "added release repo ref"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a4be9c923f4740ff6d2c79b42e2201e3926ffa89
+First time build. Skipping changelog.
+[Jpetstore-Release] $ /opt/maven/apache-maven-3.5.0/bin/mvn -f ./foss-parent/pom.xml -s /home/ec2-user/settings.xml clean depoy
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building foss-parent 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.159 s
+[INFO] Finished at: 2017-07-13T01:06:37-04:00
+[INFO] Final Memory: 5M/15M
+[INFO] ------------------------------------------------------------------------
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Unknown lifecycle phase "depoy". You must specify a valid lifecycle phase or a goal in the format <plugin-prefix>:<goal> or <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>. Available lifecycle phases are: validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pre-site, site, post-site, site-deploy. -> [Help 1]
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/LifecyclePhaseNotFoundException
+Build step 'Invoke top-level Maven targets' marked build as failure
+Finished: FAILURE

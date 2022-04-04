@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters class="java.util.Arrays$ArrayList">
+        <a class="hudson.model.ParameterValue-array"/>
+      </parameters>
+      <parameterDefinitionNames class="empty-list"/>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UpstreamCause>
+            <upstreamProject>Java DevOps/sbx-webapp-release</upstreamProject>
+            <upstreamUrl>job/Java%20DevOps/job/sbx-webapp-release/</upstreamUrl>
+            <upstreamBuild>22</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-UpstreamCause>
+                <upstreamProject>Java DevOps/sbx-webapp-sonarqubescan</upstreamProject>
+                <upstreamUrl>job/Java%20DevOps/job/sbx-webapp-sonarqubescan/</upstreamUrl>
+                <upstreamBuild>25</upstreamBuild>
+                <upstreamCauses>
+                  <hudson.model.Cause_-UserIdCause>
+                    <userId>devops_jenkins</userId>
+                  </hudson.model.Cause_-UserIdCause>
+                </upstreamCauses>
+              </hudson.model.Cause_-UpstreamCause>
+            </upstreamCauses>
+          </hudson.model.Cause_-UpstreamCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>118</queueId>
+  <timestamp>1506227503141</timestamp>
+  <startTime>1506227503142</startTime>
+  <result>SUCCESS</result>
+  <duration>3351</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn>AnsibleControlNode</builtOn>
+  <workspace>/opt/jenkins/workspace/Java DevOps/sbx-webapp-ansible-deploy</workspace>
+  <hudsonVersion>2.69</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

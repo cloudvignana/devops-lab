@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.13">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>devops_jenkins</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.8">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+  </actions>
+  <queueId>56</queueId>
+  <timestamp>1505032625842</timestamp>
+  <startTime>1505032625843</startTime>
+  <result>FAILURE</result>
+  <duration>14117</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>
+node(&apos;AnsibleControlNode&apos;) {
+build job: &apos;sbx-webapp-release&apos;, parameters: [string(name: &apos;nexus-release-repo&apos;, value: &apos;http://35.196.118.245:8081/repository/devops-releases/&apos;)]
+}
+</script>
+    <loadedScripts class="map"/>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>19119827</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>14526941</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>321345049</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>118970306</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>92560742</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>8</iota>
+    <head>1:8</head>
+  </execution>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>
