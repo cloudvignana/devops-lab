@@ -1,0 +1,4 @@
+sudo wget http://apache.claz.org/tomcat/tomcat-8/v8.5.16/bin/apache-tomcat-8.5.16.tar.gz
+
+
+wget http://mirror.jax.hugeserver.com/apache/tomcat/tomcat-8/v8.5.16/bin/apache-tomcat-8.5.16-windows-x64.zip -OutFile apache-tomcat-8.5.16-windows-x64.zip
