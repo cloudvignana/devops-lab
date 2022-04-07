@@ -1,8 +1,10 @@
 ---
 title: Tomcat Web Server Install
-parent: Continuous Delivery
-nav_order: 2
+parent: Tomcat Web Server
+grand_parent: Continuous Delivery
 ---
+
+
 # Steps:-
 
 

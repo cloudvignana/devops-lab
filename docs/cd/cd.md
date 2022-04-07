@@ -5,3 +5,4 @@ nav_order: 3
 ---
 
 ## Continuous Delivery/Deployment related stuff
+{: .label .label-green }

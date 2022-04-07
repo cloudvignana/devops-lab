@@ -1,5 +1,5 @@
 ---
-title: Tomcat Web Server Intro
+title: Tomcat Web Server
 parent: Continuous Delivery
 nav_order: 1
 ---
