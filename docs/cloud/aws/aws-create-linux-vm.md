@@ -1,3 +1,9 @@
+---
+title: AWS Linux VM Create1
+parent: AWS Cloud Intro
+nav_order: 2
+---
+
 <img src="./aws_create_media/image1.png" width="623" height="350" />
 
 <img src="./aws_create_media/image2.png" width="623" height="350" />

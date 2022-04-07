@@ -1,3 +1,9 @@
+---
+title: Gitlab SCM
+parent: Continuous Integration
+nav_order: 1
+---
+
 Step A:
 Account creation
 https://gitlab.com/users/sign_in

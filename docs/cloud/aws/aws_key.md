@@ -1,3 +1,9 @@
+---
+title: AWS Key
+parent: AWS Cloud Intro
+nav_order: 1
+---
+
 a)
 
 <https://console.aws.amazon.com/ec2>

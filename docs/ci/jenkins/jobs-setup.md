@@ -1,6 +1,7 @@
 ---
 title: Jenkins Jobs Setup
-parent: Continuous Integration
+parent: Jenkins CI
+grand_parent: Continuous Integration
 nav_order: 2
 ---
 

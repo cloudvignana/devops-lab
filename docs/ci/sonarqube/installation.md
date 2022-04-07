@@ -1,7 +1,7 @@
 ---
-title: sonarqube
-parent: CI
-grand_parent: home
+title: SonarQube Installation
+parent: SonarQube SCA
+grand_parent: Continuous Integration
 nav_order: 1
 ---
 

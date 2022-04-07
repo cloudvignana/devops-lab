@@ -1,8 +1,10 @@
 ---
 title: Jenkins Installation
-parent: Continuous Integration
+parent: Jenkins CI
+grand_parent: Continuous Integration
 nav_order: 1
 ---
+
 
 # **Installation and Configuration References**
 
