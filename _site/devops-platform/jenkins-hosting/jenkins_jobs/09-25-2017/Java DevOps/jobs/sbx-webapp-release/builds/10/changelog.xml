@@ -1,0 +1,22 @@
+commit 5a4668392bcf39c08bcfc59b539982654e431b90
+tree 557c5d07d7c4ea2225e4552e4ce3752dd341e515
+parent 29345f2882b17839f1030ccc145755bfafdb9530
+author Sairam Krishna <sairamkrishna1235@gmail.com> 2017-09-10 04:26:31 -0400
+committer Sairam Krishna <sairamkrishna1235@gmail.com> 2017-09-10 04:26:31 -0400
+
+    adding missed servlet class
+
+
+
+:000000 100644 0000000000000000000000000000000000000000 320f9393c224d546ded4ef55d905675bd83424e4 A	sbx-java-webapp/src/main/java/net/devops/java/sbx/webapp/MathServlet.java
+commit 29345f2882b17839f1030ccc145755bfafdb9530
+tree 76143407a0ae14fb64e0a05f173be5b144bfb111
+parent 3344b5c5b6cd05e6a96b4f30d8fdca5b2e73f9b1
+author Sairam Krishna <sairamkrishna1235@gmail.com> 2017-09-10 04:06:47 -0400
+committer Sairam Krishna <sairamkrishna1235@gmail.com> 2017-09-10 04:06:47 -0400
+
+    added simple servlet
+
+
+
+:100644 100644 9f88c1f9632445500e3b3688fe477b860f77d8f2 32cd0f10fdbe93f5fbbc6e06ca4226948ec6c455 M	sbx-java-webapp/src/main/webapp/WEB-INF/web.xml

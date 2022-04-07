@@ -1,0 +1,373 @@
+Started by user [8mha:////4EubDzcc5+rlsLvkKzUGX9HGHvL3A7UoTK0UQk+uhfcJAAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYR/dLi1CL9lNSy/ILi+KzUvOzMvGIAwgdRX8kAAAA=[0mDevOps Jenkins
+Building remotely on [8mha:////4MAZxWbffkyz1ImCZoKHl+nf69iy/LCs6qiu27zTGNrbAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/eT83ILSktQi/cTyYt3UZCNdoNWlFbrFOYllqbqGAKMcMzPUAAAA[0maws-ec2-linux-slave-1 in workspace /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://gitlab.com/devlabs35/sonarqube-sbx.git # timeout=10
+Fetching upstream changes from https://gitlab.com/devlabs35/sonarqube-sbx.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://gitlab.com/devlabs35/sonarqube-sbx.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 72cc88d6083ba1ba91e9e31932ba54a9b9c58602 (refs/remotes/origin/master)
+Commit message: "sonarscan via maven "
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 72cc88d6083ba1ba91e9e31932ba54a9b9c58602
+ > git rev-list 72cc88d6083ba1ba91e9e31932ba54a9b9c58602 # timeout=10
+[complex-sbx-webapp-sonarqubescan] $ /opt/maven/apache-maven-3.5.0/bin/mvn -f sonarqube-sbx-java/pom.xml -Dsonar.sources=. -Dsonar.login=admin -Dsonar.exclusions=**/*Test*/** -Dsonar.projectVersion=2.0 -Dsonar.projectKey=net.devops.training -Dsonar.host.url=http://ec2-54-166-136-126.compute-1.amazonaws.com:9000 -Dsonar.test.inclusions=**/*Test*/** -Dsonar.password=admin -Dsonar.tests=. -Dsonar.projectName=sonarqube-sbx-java clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Example of SonarQube Scanner for Maven + Code Coverage by UT and IT
+[INFO] Java :: JaCoco Multi Modules :: App
+[INFO] JaCoco Multi Modules :: App IT
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Example of SonarQube Scanner for Maven + Code Coverage by UT and IT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ sonarqube-sbx-java ---
+[INFO] Deleting /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/target
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent (default-cli) @ sonarqube-sbx-java ---
+[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/target/jacoco.exec,append=true"
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent (agent-for-ut) @ sonarqube-sbx-java ---
+[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/target/jacoco.exec,append=true"
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent-integration (agent-for-it) @ sonarqube-sbx-java ---
+[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/target/jacoco-it.exec,append=true"
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:report (jacoco-site) @ sonarqube-sbx-java ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.4:install (default-install) @ sonarqube-sbx-java ---
+[INFO] Installing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/pom.xml to /home/ec2-user/.m2/repository/net/devops/training/sonarqube-sbx-java/1.0-SNAPSHOT/sonarqube-sbx-java-1.0-SNAPSHOT.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Java :: JaCoco Multi Modules :: App 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ app-java ---
+[INFO] Deleting /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent (default-cli) @ app-java ---
+[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/jacoco.exec,append=true"
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent (agent-for-ut) @ app-java ---
+[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/jacoco.exec,append=true"
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ app-java ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/src/main/resources
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ app-java ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/classes
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ app-java ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/src/test/resources
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ app-java ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/test-classes
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ app-java ---
+[INFO] Surefire report directory: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running example.HelloWorldUnitTest
+coveredByUnitTest1
+coveredByUnitTest2
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.221 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ app-java ---
+[INFO] Building jar: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/app-java-1.0-SNAPSHOT.jar
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent-integration (agent-for-it) @ app-java ---
+[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/jacoco-it.exec,append=true"
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:report (jacoco-site) @ app-java ---
+[INFO] Loading execution data file /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/jacoco.exec
+[INFO] Analyzed bundle 'Java :: JaCoco Multi Modules :: App' with 1 classes
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.4:install (default-install) @ app-java ---
+[INFO] Installing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/app-java-1.0-SNAPSHOT.jar to /home/ec2-user/.m2/repository/net/devops/training/app-java/1.0-SNAPSHOT/app-java-1.0-SNAPSHOT.jar
+[INFO] Installing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/pom.xml to /home/ec2-user/.m2/repository/net/devops/training/app-java/1.0-SNAPSHOT/app-java-1.0-SNAPSHOT.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building JaCoco Multi Modules :: App IT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ app-it ---
+[INFO] Deleting /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent (default-cli) @ app-it ---
+[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/../target/jacoco-it.exec,append=true"
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent (agent-for-ut) @ app-it ---
+[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/../target/jacoco-it.exec,append=true"
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ app-it ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/src/main/resources
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ app-it ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/classes
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ app-it ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/src/test/resources
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ app-it ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/test-classes
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ app-it ---
+[INFO] Surefire report directory: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running example.HelloWorldIntegrationTest
+coveredByIntegrationTest1
+coveredByIntegrationTest2
+coveredByIntegrationTest3
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.212 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ app-it ---
+[INFO] Building jar: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/app-it-1.0-SNAPSHOT.jar
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent-integration (agent-for-it) @ app-it ---
+[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/../target/jacoco-it.exec,append=true"
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:report (jacoco-site) @ app-it ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.4:install (default-install) @ app-it ---
+[INFO] Installing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/app-it-1.0-SNAPSHOT.jar to /home/ec2-user/.m2/repository/net/devops/training/app-it/1.0-SNAPSHOT/app-it-1.0-SNAPSHOT.jar
+[INFO] Installing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/pom.xml to /home/ec2-user/.m2/repository/net/devops/training/app-it/1.0-SNAPSHOT/app-it-1.0-SNAPSHOT.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Example of SonarQube Scanner for Maven + Code Coverage by UT and IT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- sonar-maven-plugin:3.3.0.603:sonar (default-cli) @ sonarqube-sbx-java ---
+[INFO] User cache: /home/ec2-user/.sonar/cache
+[INFO] Load global repositories
+[INFO] Load global repositories (done) | time=458ms
+[INFO] User cache: /home/ec2-user/.sonar/cache
+[INFO] Load plugins index
+[INFO] Load plugins index (done) | time=8ms
+[INFO] SonarQube version: 6.0
+[INFO] Default locale: "en_US", source code encoding: "UTF-8"
+[INFO] Process project properties
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] /!\ A multi-module project can't have source folders, so '/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java' won't be used for the analysis. If you want to analyse files of this folder, you should create another sub-module and move them inside it.
+[INFO] Load project repositories
+[INFO] Load project repositories (done) | time=309ms
+[INFO] Load quality profiles
+[INFO] Load quality profiles (done) | time=230ms
+[INFO] Load active rules
+[INFO] Load active rules (done) | time=1124ms
+[INFO] Publish mode
+[INFO] -------------  Scan sonarqube-sbx-java
+[INFO] Load server rules
+[INFO] Load server rules (done) | time=315ms
+[INFO] Base dir: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java
+[INFO] Working dir: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/sonar
+[INFO] Source paths: .
+[INFO] Test paths: .
+[INFO] Source encoding: UTF-8, default locale: en_US
+[INFO] Index files
+[INFO] Excluded sources: 
+[INFO]   **/*Test*/**
+[INFO]   **/*Test*/**
+[INFO] Included tests: 
+[INFO]   **/*Test*/**
+[INFO] 4 files indexed
+[INFO] 42 files ignored because of inclusion/exclusion patterns
+[INFO] Quality profile for java: Sonar way
+[INFO] Quality profile for js: Sonar way
+[INFO] Sensor Lines Sensor
+[INFO] Sensor Lines Sensor (done) | time=35ms
+[INFO] Sensor JavaSquidSensor
+[INFO] Configured Java source version (sonar.java.source): 7
+[INFO] JavaClasspath initialization
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Bytecode of dependencies was not provided for analysis of source files, you might end up with less precise results. Bytecode can be provided using sonar.java.libraries property
+[INFO] JavaClasspath initialization (done) | time=41ms
+[INFO] JavaTestClasspath initialization
+[INFO] JavaTestClasspath initialization (done) | time=3ms
+[INFO] Java Main Files AST scan
+[INFO] 2 source files to be analyzed
+[INFO] Java Main Files AST scan (done) | time=634ms
+[INFO] Java bytecode scan
+[INFO] 2/2 source files have been analyzed
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Class 'example/HelloWorldUnitTest' is not accessible through the ClassLoader.
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Class 'example/HelloWorldUnitTest' is not accessible through the ClassLoader.
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Class 'example/HelloWorldUnitTest' is not accessible through the ClassLoader.
+[INFO] Java bytecode scan (done) | time=28ms
+[INFO] Java Test Files AST scan
+[INFO] 0 source files to be analyzed
+[INFO] Java Test Files AST scan (done) | time=11ms
+[INFO] Sensor JavaSquidSensor (done) | time=1597ms
+[INFO] Sensor SCM Sensor
+[INFO] SCM provider for this project is: git
+[INFO] 2 files to be analyzed
+[INFO] 0/0 source files have been analyzed
+[INFO] 0/2 files analyzed
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Missing blame information for the following files:
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]   * /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/site/jacoco/jacoco-resources/prettify.js
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]   * /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/site/jacoco/jacoco-resources/sort.js
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] This may lead to missing/broken features in SonarQube
+[INFO] Sensor SCM Sensor (done) | time=330ms
+[INFO] Sensor SurefireSensor
+[INFO] parsing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/surefire-reports
+[INFO] Sensor SurefireSensor (done) | time=134ms
+[INFO] Sensor JaCoCoSensor
+[INFO] Analysing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/jacoco.exec
+[INFO] No information about coverage per test.
+[INFO] Sensor JaCoCoSensor (done) | time=96ms
+[INFO] Sensor JaCoCoItSensor
+[INFO] Analysing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/target/jacoco-it.exec
+[INFO] No information about coverage per test.
+[INFO] Sensor JaCoCoItSensor (done) | time=2ms
+[INFO] Sensor JaCoCoOverallSensor
+[INFO] Analysing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/jacoco.exec
+[INFO] Analysing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/target/jacoco-it.exec
+[INFO] Analysing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/sonar/jacoco-overall.exec
+[INFO] No information about coverage per test.
+[INFO] Sensor JaCoCoOverallSensor (done) | time=18ms
+[INFO] Sensor XmlFileSensor
+[INFO] Sensor XmlFileSensor (done) | time=0ms
+[INFO] Sensor JavaScript Squid Sensor
+[INFO] 2 source files to be analyzed
+[INFO] Unit Test Coverage Sensor is started
+[INFO] Integration Test Coverage Sensor is started
+[INFO] Overall Coverage Sensor is started
+[INFO] Sensor JavaScript Squid Sensor (done) | time=2230ms
+[INFO] Sensor Zero Coverage Sensor
+[INFO] 2/2 source files have been analyzed
+[INFO] Sensor Zero Coverage Sensor (done) | time=21ms
+[INFO] Sensor Code Colorizer Sensor
+[INFO] Sensor Code Colorizer Sensor (done) | time=0ms
+[INFO] Sensor CPD Block Indexer
+[INFO] JavaCpdBlockIndexer is used for java
+[INFO] DefaultCpdBlockIndexer is used for js
+[INFO] Sensor CPD Block Indexer (done) | time=28ms
+[INFO] -------------  Scan sonarqube-sbx-java
+[INFO] Base dir: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it
+[INFO] Working dir: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/sonar
+[INFO] Source paths: .
+[INFO] Test paths: .
+[INFO] Source encoding: UTF-8, default locale: en_US
+[INFO] Index files
+[INFO] Excluded sources: 
+[INFO]   **/*Test*/**
+[INFO]   **/*Test*/**
+[INFO] Included tests: 
+[INFO]   **/*Test*/**
+[INFO] 2 files indexed
+[INFO] 13 files ignored because of inclusion/exclusion patterns
+[INFO] Quality profile for java: Sonar way
+[INFO] Sensor Lines Sensor
+[INFO] Sensor Lines Sensor (done) | time=0ms
+[INFO] Sensor JavaSquidSensor
+[INFO] Configured Java source version (sonar.java.source): 7
+[INFO] JavaClasspath initialization
+[INFO] JavaClasspath initialization (done) | time=26ms
+[INFO] JavaTestClasspath initialization
+[INFO] JavaTestClasspath initialization (done) | time=1ms
+[INFO] Java Main Files AST scan
+[INFO] 2 source files to be analyzed
+[INFO] Java Main Files AST scan (done) | time=123ms
+[INFO] Java bytecode scan
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Class 'example/HelloWorldIntegrationTest' is not accessible through the ClassLoader.
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Class 'example/HelloWorldIntegrationTest' is not accessible through the ClassLoader.
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Class 'example/HelloWorldIntegrationTest' is not accessible through the ClassLoader.
+[INFO] Java bytecode scan (done) | time=2ms
+[INFO] Java Test Files AST scan
+[INFO] 0 source files to be analyzed
+[INFO] Java Test Files AST scan (done) | time=16ms
+[INFO] Sensor JavaSquidSensor (done) | time=179ms
+[INFO] Sensor SCM Sensor
+[INFO] Sensor SCM Sensor (done) | time=1ms
+[INFO] Sensor SurefireSensor
+[INFO] parsing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/surefire-reports
+[INFO] Sensor SurefireSensor (done) | time=3ms
+[INFO] Sensor JaCoCoSensor
+[INFO] JaCoCoSensor: JaCoCo report not found : /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/jacoco.exec
+[INFO] Sensor JaCoCoSensor (done) | time=0ms
+[INFO] Sensor JaCoCoItSensor
+[INFO] Analysing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/target/jacoco-it.exec
+[INFO] No information about coverage per test.
+[INFO] Sensor JaCoCoItSensor (done) | time=1ms
+[INFO] Sensor JaCoCoOverallSensor
+[INFO] Analysing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/target/jacoco-it.exec
+[INFO] Analysing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/sonar/jacoco-overall.exec
+[INFO] No information about coverage per test.
+[INFO] Sensor JaCoCoOverallSensor (done) | time=2ms
+[INFO] Sensor XmlFileSensor
+[INFO] Sensor XmlFileSensor (done) | time=0ms
+[INFO] Sensor Zero Coverage Sensor
+[INFO] 2/2 source files have been analyzed
+[INFO] 0/0 source files have been analyzed
+[INFO] Sensor Zero Coverage Sensor (done) | time=37ms
+[INFO] Sensor Code Colorizer Sensor
+[INFO] Sensor Code Colorizer Sensor (done) | time=0ms
+[INFO] Sensor CPD Block Indexer
+[INFO] JavaCpdBlockIndexer is used for java
+[INFO] Sensor CPD Block Indexer (done) | time=1ms
+[INFO] -------------  Scan sonarqube-sbx-java
+[INFO] Base dir: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java
+[INFO] Working dir: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/target/sonar
+[INFO] Source encoding: UTF-8, default locale: en_US
+[INFO] Sensor Lines Sensor
+[INFO] Sensor Lines Sensor (done) | time=0ms
+[INFO] Sensor SCM Sensor
+[INFO] Sensor SCM Sensor (done) | time=0ms
+[INFO] Sensor XmlFileSensor
+[INFO] Sensor XmlFileSensor (done) | time=0ms
+[INFO] Sensor Zero Coverage Sensor
+[INFO] Sensor Zero Coverage Sensor (done) | time=0ms
+[INFO] Sensor Code Colorizer Sensor
+[INFO] Sensor Code Colorizer Sensor (done) | time=0ms
+[INFO] Sensor CPD Block Indexer
+[INFO] Sensor CPD Block Indexer (done) | time=0ms
+[INFO] Calculating CPD for 2 files
+[INFO] CPD calculation finished
+[INFO] Analysis report generated in 117ms, dir size=156 KB
+[INFO] Analysis reports compressed in 44ms, zip size=60 KB
+[INFO] Analysis report uploaded in 84ms
+[INFO] ANALYSIS SUCCESSFUL, you can browse http://ec2-54-166-136-126.compute-1.amazonaws.com:9000/dashboard/index/net.devops.training
+[INFO] Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+[INFO] More about the report processing at http://ec2-54-166-136-126.compute-1.amazonaws.com:9000/api/ce/task?id=AV67shVyMJFx2Hst8tc5
+[INFO] Task total time: 9.043 s
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Example of SonarQube Scanner for Maven + Code Coverage by UT and IT SUCCESS [ 11.940 s]
+[INFO] Java :: JaCoco Multi Modules :: App ................ SUCCESS [  3.444 s]
+[INFO] JaCoco Multi Modules :: App IT ..................... SUCCESS [  1.017 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 18.299 s
+[INFO] Finished at: 2017-09-25T20:59:24-04:00
+[INFO] Final Memory: 33M/141M
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS

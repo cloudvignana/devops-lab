@@ -1,0 +1,75 @@
+Started by user [8mha:////4EubDzcc5+rlsLvkKzUGX9HGHvL3A7UoTK0UQk+uhfcJAAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYR/dLi1CL9lNSy/ILi+KzUvOzMvGIAwgdRX8kAAAA=[0mDevOps Jenkins
+Building remotely on [8mha:////4MAZxWbffkyz1ImCZoKHl+nf69iy/LCs6qiu27zTGNrbAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/eT83ILSktQi/cTyYt3UZCNdoNWlFbrFOYllqbqGAKMcMzPUAAAA[0maws-ec2-linux-slave-1 in workspace /opt/jenkins/workspace/Java DevOps/sbx-webapp-release
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://gitlab.com/sairamkrishna1235/java-devops.git # timeout=10
+Fetching upstream changes from https://gitlab.com/sairamkrishna1235/java-devops.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://gitlab.com/sairamkrishna1235/java-devops.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 8363dcf84afcb5e457f5ad82b71dc454ee487881 (refs/remotes/origin/master)
+Commit message: "Update deploy repo url"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8363dcf84afcb5e457f5ad82b71dc454ee487881
+ > git rev-list 532a1df4dfd0a670c672526cb2561f1978012469 # timeout=10
+[sbx-webapp-release] $ /opt/maven/apache-maven-3.5.0/bin/mvn -f ./sbx-java-webapp/pom.xml -s /home/ec2-user/settings.xml clean deploy -Dnexus_rel_repo=http://35.196.47.166:8081/repository/devops-releases/
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building java-webapp Maven Webapp 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ sbx-java-webapp ---
+[INFO] Deleting /opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/target
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ sbx-java-webapp ---
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/src/main/resources
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ sbx-java-webapp ---
+[INFO] No sources to compile
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ sbx-java-webapp ---
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/src/test/resources
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ sbx-java-webapp ---
+[INFO] No sources to compile
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ sbx-java-webapp ---
+[INFO] No tests to run.
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-war-plugin:2.2:war (default-war) @ sbx-java-webapp ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [sbx-java-webapp] in [/opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/target/sbx-java-webapp-1.0.0]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/src/main/webapp]
+[INFO] Webapp assembled in [43 msecs]
+[INFO] Building war: /opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/target/sbx-java-webapp-1.0.0.war
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.4:install (default-install) @ sbx-java-webapp ---
+[INFO] Installing /opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/target/sbx-java-webapp-1.0.0.war to /home/ec2-user/.m2/repository/net/devops/training/sbx-java-webapp/1.0.0/sbx-java-webapp-1.0.0.war
+[INFO] Installing /opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/pom.xml to /home/ec2-user/.m2/repository/net/devops/training/sbx-java-webapp/1.0.0/sbx-java-webapp-1.0.0.pom
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-deploy-plugin:2.7:deploy (default-deploy) @ sbx-java-webapp ---
+Uploading: http://35.196.47.166:8081/repository/devops-releases/net/devops/training/sbx-java-webapp/1.0.0/sbx-java-webapp-1.0.0.war
+Uploading: http://35.196.47.166:8081/repository/devops-releases/net/devops/training/sbx-java-webapp/1.0.0/sbx-java-webapp-1.0.0.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 04:17 min
+[INFO] Finished at: 2017-09-10T02:27:15-04:00
+[INFO] Final Memory: 13M/31M
+[INFO] ------------------------------------------------------------------------
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Failed to execute goal org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy (default-deploy) on project sbx-java-webapp: Failed to deploy artifacts: Could not transfer artifact net.devops.training:sbx-java-webapp:war:1.0.0 from/to gcp-nexus-release (http://35.196.47.166:8081/repository/devops-releases/): Connect to 35.196.47.166:8081 [/35.196.47.166] failed: Connection timed out (Connection timed out) -> [Help 1]
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+Build step 'Invoke top-level Maven targets' marked build as failure
+Finished: FAILURE

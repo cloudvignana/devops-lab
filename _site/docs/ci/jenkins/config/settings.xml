@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 
+https://maven.apache.org/xsd/settings-1.0.0.xsd" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://maven.apache.org/SETTINGS/1.0.0">
+
+
+<servers>
+
+<server>
+<id>gcp-nexus-release</id>
+<username>devops_nexus_deploy</username>
+<password>devops_nexus_deploy</password>
+</server>
+
+</servers>
+
+</settings>

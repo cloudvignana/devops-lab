@@ -1,0 +1,9 @@
+Started on Sep 24, 2017 4:25:00 AM
+Using strategy: Default
+[poll] Last Built Revision: Revision 8e16c6e3233bee48aa5aa851e59029b0984512fe (refs/remotes/origin/master)
+using GIT_ASKPASS to set credentials 
+ > git ls-remote -h https://gitlab.com/sairamkrishna1235/java-devops.git # timeout=10
+Found 1 remote heads on https://gitlab.com/sairamkrishna1235/java-devops.git
+[poll] Latest remote head revision on refs/heads/master is: 8492c8b9fa4d2ce3f88492d869fba03a90627cb5
+Done. Took 0.24 sec
+Changes found

@@ -1,0 +1,57 @@
+Started by user [8mha:////4EubDzcc5+rlsLvkKzUGX9HGHvL3A7UoTK0UQk+uhfcJAAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYR/dLi1CL9lNSy/ILi+KzUvOzMvGIAwgdRX8kAAAA=[0mDevOps Jenkins
+Building remotely on [8mha:////4MAZxWbffkyz1ImCZoKHl+nf69iy/LCs6qiu27zTGNrbAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/eT83ILSktQi/cTyYt3UZCNdoNWlFbrFOYllqbqGAKMcMzPUAAAA[0maws-ec2-linux-slave-1 in workspace /opt/jenkins/workspace/Java DevOps/Jpetstore-Release
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://gitlab.com/sairamkrishna1235/foss.git # timeout=10
+Fetching upstream changes from https://gitlab.com/sairamkrishna1235/foss.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://gitlab.com/sairamkrishna1235/foss.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision a4be9c923f4740ff6d2c79b42e2201e3926ffa89 (refs/remotes/origin/master)
+Commit message: "added release repo ref"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a4be9c923f4740ff6d2c79b42e2201e3926ffa89
+ > git rev-list a4be9c923f4740ff6d2c79b42e2201e3926ffa89 # timeout=10
+[Jpetstore-Release] $ /opt/maven/apache-maven-3.5.0/bin/mvn -f ./foss-parent/pom.xml -s /home/ec2-user/settings.xml clean deploy
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building foss-parent 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/2.7/maven-deploy-plugin-2.7.pom
+Progress (1): 2.2/5.6 kBProgress (1): 5.0/5.6 kBProgress (1): 5.6 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/2.7/maven-deploy-plugin-2.7.pom (5.6 kB at 12 kB/s)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/2.7/maven-deploy-plugin-2.7.jar
+Progress (1): 2.3/27 kBProgress (1): 5.0/27 kBProgress (1): 7.8/27 kBProgress (1): 11/27 kB Progress (1): 13/27 kBProgress (1): 16/27 kBProgress (1): 19/27 kBProgress (1): 21/27 kBProgress (1): 24/27 kBProgress (1): 27 kB                      Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/2.7/maven-deploy-plugin-2.7.jar (27 kB at 497 kB/s)
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ foss-parent ---
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.4:install (default-install) @ foss-parent ---
+[INFO] Installing /opt/jenkins/workspace/Java DevOps/Jpetstore-Release/./foss-parent/pom.xml to /home/ec2-user/.m2/repository/devlabs35/foss/foss-parent/0.0.1-SNAPSHOT/foss-parent-0.0.1-SNAPSHOT.pom
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-deploy-plugin:2.7:deploy (default-deploy) @ foss-parent ---
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.pom
+Progress (1): 2.3/5.3 kBProgress (1): 5.0/5.3 kBProgress (1): 5.3 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.pom (5.3 kB at 171 kB/s)
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.12/plexus-1.0.12.pom
+Progress (1): 2.3/9.8 kBProgress (1): 5.0/9.8 kBProgress (1): 7.8/9.8 kBProgress (1): 9.8 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.12/plexus-1.0.12.pom (9.8 kB at 817 kB/s)
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.jar
+Progress (1): 2.3/251 kBProgress (1): 5.0/251 kBProgress (1): 7.8/251 kBProgress (1): 11/251 kB Progress (1): 13/251 kBProgress (1): 16/251 kBProgress (1): 19/251 kBProgress (1): 21/251 kBProgress (1): 24/251 kBProgress (1): 27/251 kBProgress (1): 30/251 kBProgress (1): 32/251 kBProgress (1): 36/251 kBProgress (1): 40/251 kBProgress (1): 45/251 kBProgress (1): 49/251 kBProgress (1): 53/251 kBProgress (1): 57/251 kBProgress (1): 61/251 kBProgress (1): 65/251 kBProgress (1): 69/251 kBProgress (1): 73/251 kBProgress (1): 77/251 kBProgress (1): 81/251 kBProgress (1): 86/251 kBProgress (1): 90/251 kBProgress (1): 94/251 kBProgress (1): 98/251 kBProgress (1): 102/251 kBProgress (1): 106/251 kBProgress (1): 110/251 kBProgress (1): 114/251 kBProgress (1): 118/251 kBProgress (1): 122/251 kBProgress (1): 126/251 kBProgress (1): 131/251 kBProgress (1): 135/251 kBProgress (1): 139/251 kBProgress (1): 143/251 kBProgress (1): 147/251 kBProgress (1): 151/251 kBProgress (1): 155/251 kBProgress (1): 159/251 kBProgress (1): 163/251 kBProgress (1): 167/251 kBProgress (1): 172/251 kBProgress (1): 176/251 kBProgress (1): 180/251 kBProgress (1): 184/251 kBProgress (1): 188/251 kBProgress (1): 192/251 kBProgress (1): 196/251 kBProgress (1): 200/251 kBProgress (1): 204/251 kBProgress (1): 208/251 kBProgress (1): 212/251 kBProgress (1): 217/251 kBProgress (1): 221/251 kBProgress (1): 225/251 kBProgress (1): 229/251 kBProgress (1): 233/251 kBProgress (1): 237/251 kBProgress (1): 241/251 kBProgress (1): 245/251 kBProgress (1): 249/251 kBProgress (1): 251 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.jar (251 kB at 3.0 MB/s)
+Downloading: http://35.196.47.166:8081/repository/devops-releases/devlabs35/foss/foss-parent/0.0.1-SNAPSHOT/maven-metadata.xml
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Could not transfer metadata devlabs35.foss:foss-parent:0.0.1-SNAPSHOT/maven-metadata.xml from/to gcp-nexus-release (http://35.196.47.166:8081/repository/devops-releases/): Failed to transfer file: http://35.196.47.166:8081/repository/devops-releases/devlabs35/foss/foss-parent/0.0.1-SNAPSHOT/maven-metadata.xml. Return code is: 400 , ReasonPhrase:Repository version policy: RELEASE does not allow metadata in path: devlabs35/foss/foss-parent/0.0.1-SNAPSHOT/maven-metadata.xml.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.014 s
+[INFO] Finished at: 2017-07-13T01:07:10-04:00
+[INFO] Final Memory: 9M/22M
+[INFO] ------------------------------------------------------------------------
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Failed to execute goal org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy (default-deploy) on project foss-parent: Failed to retrieve remote metadata devlabs35.foss:foss-parent:0.0.1-SNAPSHOT/maven-metadata.xml: Could not transfer metadata devlabs35.foss:foss-parent:0.0.1-SNAPSHOT/maven-metadata.xml from/to gcp-nexus-release (http://35.196.47.166:8081/repository/devops-releases/): Failed to transfer file: http://35.196.47.166:8081/repository/devops-releases/devlabs35/foss/foss-parent/0.0.1-SNAPSHOT/maven-metadata.xml. Return code is: 400 , ReasonPhrase:Repository version policy: RELEASE does not allow metadata in path: devlabs35/foss/foss-parent/0.0.1-SNAPSHOT/maven-metadata.xml. -> [Help 1]
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+Build step 'Invoke top-level Maven targets' marked build as failure
+Finished: FAILURE

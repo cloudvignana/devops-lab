@@ -1,0 +1,127 @@
+Started by user [8mha:////4EubDzcc5+rlsLvkKzUGX9HGHvL3A7UoTK0UQk+uhfcJAAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYR/dLi1CL9lNSy/ILi+KzUvOzMvGIAwgdRX8kAAAA=[0mDevOps Jenkins
+Building remotely on [8mha:////4MAZxWbffkyz1ImCZoKHl+nf69iy/LCs6qiu27zTGNrbAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/eT83ILSktQi/cTyYt3UZCNdoNWlFbrFOYllqbqGAKMcMzPUAAAA[0maws-ec2-linux-slave-1 in workspace /opt/jenkins/workspace/Java DevOps/sbx-webapp-release
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://gitlab.com/sairamkrishna1235/java-devops.git # timeout=10
+Fetching upstream changes from https://gitlab.com/sairamkrishna1235/java-devops.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://gitlab.com/sairamkrishna1235/java-devops.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 8363dcf84afcb5e457f5ad82b71dc454ee487881 (refs/remotes/origin/master)
+Commit message: "Update deploy repo url"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8363dcf84afcb5e457f5ad82b71dc454ee487881
+ > git rev-list 8363dcf84afcb5e457f5ad82b71dc454ee487881 # timeout=10
+[sbx-webapp-release] $ /opt/maven/apache-maven-3.5.0/bin/mvn -f ./sbx-java-webapp/pom.xml -s /home/ec2-user/settings.xml clean deploy -Dnexus_rel_repo=${nexus-release-repo}
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building java-webapp Maven Webapp 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ sbx-java-webapp ---
+[INFO] Deleting /opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/target
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ sbx-java-webapp ---
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/src/main/resources
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ sbx-java-webapp ---
+[INFO] No sources to compile
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ sbx-java-webapp ---
+[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/src/test/resources
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ sbx-java-webapp ---
+[INFO] No sources to compile
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ sbx-java-webapp ---
+[INFO] No tests to run.
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-war-plugin:2.2:war (default-war) @ sbx-java-webapp ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [sbx-java-webapp] in [/opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/target/sbx-java-webapp-1.0.0]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/src/main/webapp]
+[INFO] Webapp assembled in [43 msecs]
+[INFO] Building war: /opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/target/sbx-java-webapp-1.0.0.war
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.4:install (default-install) @ sbx-java-webapp ---
+[INFO] Installing /opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/target/sbx-java-webapp-1.0.0.war to /home/ec2-user/.m2/repository/net/devops/training/sbx-java-webapp/1.0.0/sbx-java-webapp-1.0.0.war
+[INFO] Installing /opt/jenkins/workspace/Java DevOps/sbx-webapp-release/./sbx-java-webapp/pom.xml to /home/ec2-user/.m2/repository/net/devops/training/sbx-java-webapp/1.0.0/sbx-java-webapp-1.0.0.pom
+[INFO] 
+[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-deploy-plugin:2.7:deploy (default-deploy) @ sbx-java-webapp ---
+Uploading: http://35.196.118.245:8081/repository/devops-releases/net/devops/training/sbx-java-webapp/1.0.0/sbx-java-webapp-1.0.0.war
+Progress (1): 2.0/2.3 kBProgress (1): 2.3 kB                        Uploaded: http://35.196.118.245:8081/repository/devops-releases/net/devops/training/sbx-java-webapp/1.0.0/sbx-java-webapp-1.0.0.war (2.3 kB at 4.5 kB/s)
+Uploading: http://35.196.118.245:8081/repository/devops-releases/net/devops/training/sbx-java-webapp/1.0.0/sbx-java-webapp-1.0.0.pom
+Progress (1): 1.0 kB                    Uploaded: http://35.196.118.245:8081/repository/devops-releases/net/devops/training/sbx-java-webapp/1.0.0/sbx-java-webapp-1.0.0.pom (1.0 kB at 6.1 kB/s)
+Downloading: http://35.196.118.245:8081/repository/devops-releases/net/devops/training/sbx-java-webapp/maven-metadata.xml
+Uploading: http://35.196.118.245:8081/repository/devops-releases/net/devops/training/sbx-java-webapp/maven-metadata.xml
+Progress (1): 314 B                   Uploaded: http://35.196.118.245:8081/repository/devops-releases/net/devops/training/sbx-java-webapp/maven-metadata.xml (314 B at 2.3 kB/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.564 s
+[INFO] Finished at: 2017-09-10T02:28:25-04:00
+[INFO] Final Memory: 12M/30M
+[INFO] ------------------------------------------------------------------------
+[sbx-webapp-release] $ cmd /c call /tmp/jenkins7764423260460897877.bat
+FATAL: command execution failed
+[8mha:////4Nq+OXHc341blyoONIwhGGTxuquw8+9S7msFkIge88jLAAAAVx+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0mV3NWzufebKBsTA0NFEYMUmgZnCA1SyAABjCCFBQC2xNaiYAAAAA==[0mjava.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	at hudson.Proc$LocalProc.<init>(Proc.java:249)
+	at hudson.Proc$LocalProc.<init>(Proc.java:218)
+	at hudson.Launcher$LocalLauncher.launch(Launcher.java:930)
+	at hudson.Launcher$ProcStarter.start(Launcher.java:450)
+	at hudson.Launcher$RemoteLaunchCallable.call(Launcher.java:1299)
+	at hudson.Launcher$RemoteLaunchCallable.call(Launcher.java:1260)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:181)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:52)
+	at hudson.remoting.Request$2.run(Request.java:336)
+	at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:68)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused: java.io.IOException: Cannot run program "cmd" (in directory "/opt/jenkins/workspace/Java DevOps/sbx-webapp-release"): error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at hudson.Proc$LocalProc.<init>(Proc.java:249)
+	at hudson.Proc$LocalProc.<init>(Proc.java:218)
+	at hudson.Launcher$LocalLauncher.launch(Launcher.java:930)
+	at hudson.Launcher$ProcStarter.start(Launcher.java:450)
+	at hudson.Launcher$RemoteLaunchCallable.call(Launcher.java:1299)
+	at hudson.Launcher$RemoteLaunchCallable.call(Launcher.java:1260)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:181)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:52)
+	at hudson.remoting.Request$2.run(Request.java:336)
+	at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:68)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+	at ......remote call to aws-ec2-linux-slave-1(Native Method)
+	at hudson.remoting.Channel.attachCallSiteStackTrace(Channel.java:1554)
+	at hudson.remoting.UserResponse.retrieve(UserRequest.java:281)
+	at hudson.remoting.Channel.call(Channel.java:839)
+	at hudson.Launcher$RemoteLauncher.launch(Launcher.java:1053)
+	at hudson.Launcher$ProcStarter.start(Launcher.java:450)
+	at hudson.tasks.CommandInterpreter.perform(CommandInterpreter.java:109)
+	at hudson.tasks.CommandInterpreter.perform(CommandInterpreter.java:66)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:730)
+	at hudson.model.Build$BuildExecution.build(Build.java:206)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:163)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:490)
+	at hudson.model.Run.execute(Run.java:1735)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:415)
+Build step 'Execute Windows batch command' marked build as failure
+Finished: FAILURE

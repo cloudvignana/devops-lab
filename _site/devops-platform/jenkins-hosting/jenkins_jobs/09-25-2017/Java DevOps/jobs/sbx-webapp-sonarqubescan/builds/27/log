@@ -1,0 +1,95 @@
+Started by upstream project "[8mha:////4JPCuJtZukIXTdMKw/43CXt2us1DTd+tuIHlrWJdot2wAAAArR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZV/az8JH0voDmqRgYuqWX+BcVgkeKkCt3y1KTEggLd5Ex9AHuoTezaAAAA[0mJava DevOps/sbx-webapp-ci" build number [8mha:////4L9nVjnlcXJeGfQSpe7QsEXGMl9fLLDV0c+AstZIMq5jAAAArR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBjX9rPwkfS+gOapGBi6pZf4FxWCR4qQK3fLUpMSCAt3kTH1LALvDCoPbAAAA[0m9
+originally caused by:
+ Started by an SCM change
+Building remotely on [8mha:////4MAZxWbffkyz1ImCZoKHl+nf69iy/LCs6qiu27zTGNrbAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/eT83ILSktQi/cTyYt3UZCNdoNWlFbrFOYllqbqGAKMcMzPUAAAA[0maws-ec2-linux-slave-1 in workspace /opt/jenkins/workspace/Java DevOps/sbx-webapp-sonarqubescan
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://gitlab.com/sairamkrishna1235/java-devops.git # timeout=10
+Fetching upstream changes from https://gitlab.com/sairamkrishna1235/java-devops.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://gitlab.com/sairamkrishna1235/java-devops.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 8492c8b9fa4d2ce3f88492d869fba03a90627cb5 (refs/remotes/origin/master)
+Commit message: "Update index.jsp"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8492c8b9fa4d2ce3f88492d869fba03a90627cb5
+ > git rev-list 8492c8b9fa4d2ce3f88492d869fba03a90627cb5 # timeout=10
+[sbx-webapp-sonarqubescan] $ /opt/tools/sonar_runner/sonar-runner-2.4/bin/sonar-runner -e -Dsonar.host.url=http://ec2-52-90-165-29.compute-1.amazonaws.com:9000 ******** -Dsonar.projectName=sbx-webapp -Dsonar.login=admin -Dsonar.projectVersion=2.0 "-Dsonar.profile=Sonar way" -Dsonar.password=admin -Dsonar.projectKey=sbx-webapp -Dsonar.host.url=http://ec2-54-166-136-126.compute-1.amazonaws.com:9000 -Dsonar.sources=. "-Dsonar.projectBaseDir=/opt/jenkins/workspace/Java DevOps/sbx-webapp-sonarqubescan"
+SonarQube Runner 2.4
+Java 1.8.0_144 Oracle Corporation (64-bit)
+Linux 3.10.0-514.21.2.el7.x86_64 amd64
+INFO: Error stacktraces are turned on.
+INFO: Runner configuration file: /opt/tools/sonar_runner/sonar-runner-2.4/conf/sonar-runner.properties
+INFO: Project configuration file: NONE
+INFO: Default locale: "en_US", source code encoding: "UTF-8"
+INFO: Work directory: /opt/jenkins/workspace/Java DevOps/sbx-webapp-sonarqubescan/.sonar
+ERROR: Sonar server 'http://ec2-54-166-136-126.compute-1.amazonaws.com:9000' can not be reached
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION FAILURE
+INFO: ------------------------------------------------------------------------
+Total time: 0.135s
+Final Memory: 0M/15M
+INFO: ------------------------------------------------------------------------
+ERROR: Error during Sonar runner execution
+org.sonar.runner.kevinsawicki.HttpRequest$HttpRequestException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.sonar.runner.kevinsawicki.HttpRequest.code(HttpRequest.java:1392)
+	at org.sonar.runner.kevinsawicki.HttpRequest.ok(HttpRequest.java:1417)
+	at org.sonar.runner.impl.ServerConnection.downloadString(ServerConnection.java:93)
+	at org.sonar.runner.impl.ServerVersion.downloadVersion(ServerVersion.java:47)
+	at org.sonar.runner.impl.ServerVersion.version(ServerVersion.java:38)
+	at org.sonar.runner.impl.ServerVersion.is37Compatible(ServerVersion.java:58)
+	at org.sonar.runner.impl.JarDownloader.checkVersionAndDownload(JarDownloader.java:36)
+	at org.sonar.runner.impl.BatchLauncher$1.run(BatchLauncher.java:71)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.sonar.runner.impl.BatchLauncher.doExecute(BatchLauncher.java:69)
+	at org.sonar.runner.impl.BatchLauncher.execute(BatchLauncher.java:50)
+	at org.sonar.runner.api.EmbeddedRunner.doExecute(EmbeddedRunner.java:102)
+	at org.sonar.runner.api.Runner.execute(Runner.java:100)
+	at org.sonar.runner.Main.executeTask(Main.java:70)
+	at org.sonar.runner.Main.execute(Main.java:59)
+	at org.sonar.runner.Main.main(Main.java:53)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1926)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1921)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1920)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1490)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at org.sonar.runner.kevinsawicki.HttpRequest.code(HttpRequest.java:1390)
+	... 15 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1202)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1138)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:966)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1546)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderField(HttpURLConnection.java:2982)
+	at org.sonar.runner.kevinsawicki.HttpRequest.header(HttpRequest.java:1903)
+	at org.sonar.runner.kevinsawicki.HttpRequest.contentType(HttpRequest.java:2308)
+	at org.sonar.runner.impl.ServerConnection.downloadString(ServerConnection.java:89)
+	... 13 more
+ERROR: 
+ERROR: Re-run SonarQube Runner using the -X switch to enable full debug logging.
+ERROR: SonarQube scanner exited with non-zero code: 1
+[8mha:////4Nq+OXHc341blyoONIwhGGTxuquw8+9S7msFkIge88jLAAAAVx+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0mV3NWzufebKBsTA0NFEYMUmgZnCA1SyAABjCCFBQC2xNaiYAAAAA==[0mTriggering a new build of [8mha:////4H/p/wiQ/dFTzzIyVh3dF44kAjswNtDJSqc+G9NrjEd3AAAAsh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyFEgYt/az8JH0voDmqRgYuqWX+BcVgkeKkCt3y1KTEggLdotSc1MTiVH0An1xZh98AAAA=[0mJava DevOps » sbx-webapp-release
+Finished: FAILURE

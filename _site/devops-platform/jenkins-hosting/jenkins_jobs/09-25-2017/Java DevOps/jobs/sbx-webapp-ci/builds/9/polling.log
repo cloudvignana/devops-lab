@@ -1,0 +1,8 @@
+Started on Sep 24, 2017 5:28:00 AM
+Using strategy: Default
+using GIT_ASKPASS to set credentials 
+ > git ls-remote -h https://gitlab.com/DevOps-Lab/java-devops-sbx-webapp.git # timeout=10
+Found 3 remote heads on https://gitlab.com/DevOps-Lab/java-devops-sbx-webapp.git
+[poll] Latest remote head revision on refs/heads/master is: e2cbaf22ba58bf408fcb9413990eee1f733368bb
+Done. Took 0.26 sec
+Changes found

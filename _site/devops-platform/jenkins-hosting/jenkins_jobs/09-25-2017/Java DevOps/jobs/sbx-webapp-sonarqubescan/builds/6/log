@@ -1,0 +1,76 @@
+Started by user [8mha:////4EubDzcc5+rlsLvkKzUGX9HGHvL3A7UoTK0UQk+uhfcJAAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYR/dLi1CL9lNSy/ILi+KzUvOzMvGIAwgdRX8kAAAA=[0mDevOps Jenkins
+Building remotely on [8mha:////4MAZxWbffkyz1ImCZoKHl+nf69iy/LCs6qiu27zTGNrbAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/eT83ILSktQi/cTyYt3UZCNdoNWlFbrFOYllqbqGAKMcMzPUAAAA[0maws-ec2-linux-slave-1 in workspace /opt/jenkins/workspace/Java DevOps/sbx-webapp-sonarqubescan
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://gitlab.com/sairamkrishna1235/java-devops.git # timeout=10
+Fetching upstream changes from https://gitlab.com/sairamkrishna1235/java-devops.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://gitlab.com/sairamkrishna1235/java-devops.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 3344b5c5b6cd05e6a96b4f30d8fdca5b2e73f9b1 (refs/remotes/origin/master)
+Commit message: "Update index.jsp"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3344b5c5b6cd05e6a96b4f30d8fdca5b2e73f9b1
+ > git rev-list 3344b5c5b6cd05e6a96b4f30d8fdca5b2e73f9b1 # timeout=10
+[sbx-webapp-sonarqubescan] $ /opt/tools/sonar_runner/sonar-runner-2.4/bin/sonar-runner -e -Dsonar.host.url=http://ec2-52-90-165-29.compute-1.amazonaws.com:9000 ******** -Dsonar.projectName=sbx-webapp -Dsonar.login=admin -Dsonar.projectVersion=1.0 -Dsonar.password=admin -Dsonar.projectKey=sbx-webapp -Dsonar.host.url=http://ec2-54-166-136-126.compute-1.amazonaws.com:9000 -Dsonar.sources=./sbx-java-webapp/src "-Dsonar.projectBaseDir=/opt/jenkins/workspace/Java DevOps/sbx-webapp-sonarqubescan"
+SonarQube Runner 2.4
+Java 1.8.0_131 Oracle Corporation (64-bit)
+Linux 3.10.0-514.21.2.el7.x86_64 amd64
+INFO: Error stacktraces are turned on.
+INFO: Runner configuration file: /opt/tools/sonar_runner/sonar-runner-2.4/conf/sonar-runner.properties
+INFO: Project configuration file: NONE
+INFO: Default locale: "en_US", source code encoding: "UTF-8"
+INFO: Work directory: /opt/jenkins/workspace/Java DevOps/sbx-webapp-sonarqubescan/.sonar
+INFO: SonarQube Server 6.0
+03:43:23.679 INFO  - Load global repositories
+03:43:24.071 INFO  - Load global repositories (done) | time=394ms
+03:43:24.088 INFO  - User cache: /home/ec2-user/.sonar/cache
+03:43:24.357 INFO  - Load plugins index
+03:43:24.362 INFO  - Load plugins index (done) | time=5ms
+03:43:24.818 INFO  - Process project properties
+03:43:25.056 INFO  - Load project repositories
+03:43:25.162 INFO  - Load project repositories (done) | time=106ms
+03:43:25.233 INFO  - Load quality profiles
+03:43:25.490 INFO  - Load quality profiles (done) | time=257ms
+03:43:25.494 INFO  - Load active rules
+03:43:26.640 INFO  - Load active rules (done) | time=1146ms
+03:43:26.689 INFO  - Publish mode
+03:43:26.690 INFO  - -------------  Scan sbx-webapp
+03:43:26.807 INFO  - Load server rules
+03:43:27.095 INFO  - Load server rules (done) | time=288ms
+03:43:27.212 INFO  - Base dir: /opt/jenkins/workspace/Java DevOps/sbx-webapp-sonarqubescan
+03:43:27.212 INFO  - Working dir: /opt/jenkins/workspace/Java DevOps/sbx-webapp-sonarqubescan/.sonar
+03:43:27.213 INFO  - Source paths: sbx-java-webapp/src
+03:43:27.213 INFO  - Source encoding: UTF-8, default locale: en_US
+03:43:27.214 INFO  - Index files
+03:43:27.231 INFO  - 0 files indexed
+03:43:28.069 INFO  - Sensor Lines Sensor
+03:43:28.069 INFO  - Sensor Lines Sensor (done) | time=0ms
+03:43:28.069 INFO  - Sensor SCM Sensor
+03:43:28.069 INFO  - Sensor SCM Sensor (done) | time=0ms
+03:43:28.069 INFO  - Sensor XmlFileSensor
+03:43:28.069 INFO  - Sensor XmlFileSensor (done) | time=0ms
+03:43:28.069 INFO  - Sensor Zero Coverage Sensor
+03:43:28.069 INFO  - Sensor Zero Coverage Sensor (done) | time=0ms
+03:43:28.070 INFO  - Sensor Code Colorizer Sensor
+03:43:28.070 INFO  - Sensor Code Colorizer Sensor (done) | time=0ms
+03:43:28.070 INFO  - Sensor CPD Block Indexer
+03:43:28.070 INFO  - Sensor CPD Block Indexer (done) | time=0ms
+03:43:28.070 INFO  - Calculating CPD for 0 files
+03:43:28.075 INFO  - CPD calculation finished
+03:43:28.143 INFO  - Analysis report generated in 67ms, dir size=11 KB
+03:43:28.148 INFO  - Analysis reports compressed in 5ms, zip size=4 KB
+03:43:28.230 INFO  - Analysis report uploaded in 82ms
+03:43:28.230 INFO  - ANALYSIS SUCCESSFUL, you can browse http://ec2-54-166-136-126.compute-1.amazonaws.com:9000/dashboard/index/sbx-webapp
+03:43:28.230 INFO  - Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+03:43:28.230 INFO  - More about the report processing at http://ec2-54-166-136-126.compute-1.amazonaws.com:9000/api/ce/task?id=AV5qvkXYn0CXIJRbMWvv
+03:43:28.237 INFO  - Task total time: 3.724 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+Total time: 5.659s
+Final Memory: 9M/108M
+INFO: ------------------------------------------------------------------------
+Finished: SUCCESS

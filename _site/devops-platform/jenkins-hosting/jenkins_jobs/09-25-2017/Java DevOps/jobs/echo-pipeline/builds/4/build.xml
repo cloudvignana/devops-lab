@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.13">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>devops_jenkins</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.8">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+  </actions>
+  <queueId>134</queueId>
+  <timestamp>1506386251420</timestamp>
+  <startTime>1506386251422</startTime>
+  <result>SUCCESS</result>
+  <duration>2160</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>echo(&quot;hello from Pipeline&quot;);</script>
+    <loadedScripts class="map"/>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>11032401</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>390018982</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>540018019</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>781639694</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>172428569</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>4</iota>
+    <head>1:4</head>
+  </execution>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>
