@@ -1,10 +1,8 @@
-My Technical training documentation
+# My documentation for setting up a devops platform
 
 
 ---------------------------------------------------------------------------------------------------------
 
-Visit @ https://devlabs35-personal.gitlab.io/devops-training-wiki
-Gitlab Pages with Gitbook 
 
 
 ---------------------------------------------------------------------------------------------------------
