@@ -1,3 +1,9 @@
+---
+title: Jenkins Tools Configuration
+parent: Continuous Integration
+nav_order: 2
+---
+
 # Jenkins tools configuration guide
 
 a\)

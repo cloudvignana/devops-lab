@@ -1,7 +1,6 @@
 ---
-title: jenkins
-parent: CI
-grand_parent: home
+title: Jenkins Installation
+parent: Continuous Integration
 nav_order: 1
 ---
 

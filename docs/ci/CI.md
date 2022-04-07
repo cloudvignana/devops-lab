@@ -1,6 +1,5 @@
 ---
-title: CI
-parent: home
+title: Continuous Integration
 has_children: true
 nav_order: 2
 ---

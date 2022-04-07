@@ -1,256 +1,0 @@
-Started by user [8mha:////4EubDzcc5+rlsLvkKzUGX9HGHvL3A7UoTK0UQk+uhfcJAAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYR/dLi1CL9lNSy/ILi+KzUvOzMvGIAwgdRX8kAAAA=[0mDevOps Jenkins
-Building remotely on [8mha:////4MAZxWbffkyz1ImCZoKHl+nf69iy/LCs6qiu27zTGNrbAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/eT83ILSktQi/cTyYt3UZCNdoNWlFbrFOYllqbqGAKMcMzPUAAAA[0maws-ec2-linux-slave-1 in workspace /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan
- > git rev-parse --is-inside-work-tree # timeout=10
-Fetching changes from the remote Git repository
- > git config remote.origin.url https://gitlab.com/devlabs35/sonarqube-sbx.git # timeout=10
-Fetching upstream changes from https://gitlab.com/devlabs35/sonarqube-sbx.git
- > git --version # timeout=10
-using GIT_ASKPASS to set credentials 
- > git fetch --tags --progress https://gitlab.com/devlabs35/sonarqube-sbx.git +refs/heads/*:refs/remotes/origin/*
- > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
- > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
-Checking out Revision 72cc88d6083ba1ba91e9e31932ba54a9b9c58602 (refs/remotes/origin/master)
-Commit message: "sonarscan via maven "
- > git config core.sparsecheckout # timeout=10
- > git checkout -f 72cc88d6083ba1ba91e9e31932ba54a9b9c58602
- > git rev-list 72cc88d6083ba1ba91e9e31932ba54a9b9c58602 # timeout=10
-[complex-sbx-webapp-sonarqubescan] $ /opt/maven/apache-maven-3.5.0/bin/mvn -f sonarqube-sbx-java/pom.xml -Dsonar.projectName=sonarqube-sbx-java -Dsonar.login=admin -Dsonar.projectVersion=2.0 "-Dsonar.profile=Sonar way" -Dsonar.password=admin -Dsonar.projectKey=net.devops.training -Dsonar.host.url=http://ec2-54-166-136-126.compute-1.amazonaws.com:9000 -Dsonar.sources=. clean install sonar:sonar
-[INFO] Scanning for projects...
-[INFO] ------------------------------------------------------------------------
-[INFO] Reactor Build Order:
-[INFO] 
-[INFO] Example of SonarQube Scanner for Maven + Code Coverage by UT and IT
-[INFO] Java :: JaCoco Multi Modules :: App
-[INFO] JaCoco Multi Modules :: App IT
-Downloading: https://repo.maven.apache.org/maven2/org/codehaus/mojo/sonar-maven-plugin/maven-metadata.xml
-Progress (1): 941 B                   Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/mojo/sonar-maven-plugin/maven-metadata.xml (941 B at 2.4 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/codehaus/mojo/sonar-maven-plugin/3.3.0.603/sonar-maven-plugin-3.3.0.603.pom
-Progress (1): 1.1 kB                    Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/mojo/sonar-maven-plugin/3.3.0.603/sonar-maven-plugin-3.3.0.603.pom (1.1 kB at 84 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/maven/sonar-maven-plugin/3.3.0.603/sonar-maven-plugin-3.3.0.603.pom
-Progress (1): 2.8/9.1 kBProgress (1): 3.7/9.1 kBProgress (1): 6.4/9.1 kBProgress (1): 9.1 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/maven/sonar-maven-plugin/3.3.0.603/sonar-maven-plugin-3.3.0.603.pom (9.1 kB at 252 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/sonarsource/parent/parent/40/parent-40.pom
-Progress (1): 2.3/31 kBProgress (1): 5.0/31 kBProgress (1): 7.8/31 kBProgress (1): 11/31 kB Progress (1): 13/31 kBProgress (1): 16/31 kBProgress (1): 19/31 kBProgress (1): 21/31 kBProgress (1): 24/31 kBProgress (1): 27/31 kBProgress (1): 30/31 kBProgress (1): 31 kB                      Downloaded: https://repo.maven.apache.org/maven2/org/sonarsource/parent/parent/40/parent-40.pom (31 kB at 901 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/maven/sonar-maven-plugin/3.3.0.603/sonar-maven-plugin-3.3.0.603.jar
-Progress (1): 2.3/55 kBProgress (1): 5.0/55 kBProgress (1): 7.8/55 kBProgress (1): 11/55 kB Progress (1): 13/55 kBProgress (1): 16/55 kBProgress (1): 19/55 kBProgress (1): 21/55 kBProgress (1): 24/55 kBProgress (1): 27/55 kBProgress (1): 30/55 kBProgress (1): 32/55 kBProgress (1): 36/55 kBProgress (1): 40/55 kBProgress (1): 45/55 kBProgress (1): 49/55 kBProgress (1): 53/55 kBProgress (1): 55 kB                      Downloaded: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/maven/sonar-maven-plugin/3.3.0.603/sonar-maven-plugin-3.3.0.603.jar (55 kB at 1.1 MB/s)
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] Building Example of SonarQube Scanner for Maven + Code Coverage by UT and IT 1.0-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ sonarqube-sbx-java ---
-[INFO] Deleting /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/target
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent (agent-for-ut) @ sonarqube-sbx-java ---
-[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/target/jacoco.exec,append=true"
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent-integration (agent-for-it) @ sonarqube-sbx-java ---
-[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/target/jacoco-it.exec,append=true"
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:report (jacoco-site) @ sonarqube-sbx-java ---
-[INFO] Skipping JaCoCo execution due to missing execution data file.
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.4:install (default-install) @ sonarqube-sbx-java ---
-[INFO] Installing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/pom.xml to /home/ec2-user/.m2/repository/net/devops/training/sonarqube-sbx-java/1.0-SNAPSHOT/sonarqube-sbx-java-1.0-SNAPSHOT.pom
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] Building Java :: JaCoco Multi Modules :: App 1.0-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.pom
-Progress (1): 2.3/5.8 kBProgress (1): 5.0/5.8 kBProgress (1): 5.8 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.pom (5.8 kB at 278 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar
-Progress (1): 2.3/34 kBProgress (1): 5.0/34 kBProgress (1): 7.8/34 kBProgress (1): 11/34 kB Progress (1): 13/34 kBProgress (1): 16/34 kBProgress (1): 19/34 kBProgress (1): 21/34 kBProgress (1): 24/34 kBProgress (1): 27/34 kBProgress (1): 30/34 kBProgress (1): 32/34 kBProgress (1): 34 kB                      Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar (34 kB at 724 kB/s)
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ app-java ---
-[INFO] Deleting /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent (agent-for-ut) @ app-java ---
-[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/jacoco.exec,append=true"
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ app-java ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/src/main/resources
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ app-java ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 1 source file to /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/classes
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ app-java ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/src/test/resources
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ app-java ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 1 source file to /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/test-classes
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ app-java ---
-[INFO] Surefire report directory: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running example.HelloWorldUnitTest
-coveredByUnitTest1
-coveredByUnitTest2
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.217 sec
-
-Results :
-
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ app-java ---
-Downloading: https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.jar
-Progress (1): 2.3/208 kBProgress (1): 5.0/208 kBProgress (1): 7.8/208 kBProgress (1): 11/208 kB Progress (1): 13/208 kBProgress (1): 16/208 kBProgress (1): 19/208 kBProgress (1): 21/208 kBProgress (1): 24/208 kBProgress (1): 27/208 kBProgress (1): 30/208 kBProgress (1): 32/208 kBProgress (1): 36/208 kBProgress (1): 40/208 kBProgress (1): 45/208 kBProgress (1): 49/208 kBProgress (1): 53/208 kBProgress (1): 57/208 kBProgress (1): 61/208 kBProgress (1): 65/208 kBProgress (1): 69/208 kBProgress (1): 73/208 kBProgress (1): 77/208 kBProgress (1): 81/208 kBProgress (1): 86/208 kBProgress (1): 90/208 kBProgress (1): 94/208 kBProgress (1): 98/208 kBProgress (1): 102/208 kBProgress (1): 106/208 kBProgress (1): 110/208 kBProgress (1): 114/208 kBProgress (1): 118/208 kBProgress (1): 122/208 kBProgress (1): 126/208 kBProgress (1): 131/208 kBProgress (1): 135/208 kBProgress (1): 139/208 kBProgress (1): 143/208 kBProgress (1): 147/208 kBProgress (1): 151/208 kBProgress (1): 155/208 kBProgress (1): 159/208 kBProgress (1): 163/208 kBProgress (1): 167/208 kBProgress (1): 172/208 kBProgress (1): 176/208 kBProgress (1): 180/208 kBProgress (1): 184/208 kBProgress (1): 188/208 kBProgress (1): 192/208 kBProgress (1): 196/208 kBProgress (1): 200/208 kBProgress (1): 204/208 kBProgress (1): 208 kB                        Downloaded: https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.jar (208 kB at 3.1 MB/s)
-[INFO] Building jar: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/app-java-1.0-SNAPSHOT.jar
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent-integration (agent-for-it) @ app-java ---
-[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/jacoco-it.exec,append=true"
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:report (jacoco-site) @ app-java ---
-[INFO] Loading execution data file /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/jacoco.exec
-[INFO] Analyzed bundle 'Java :: JaCoco Multi Modules :: App' with 1 classes
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.4:install (default-install) @ app-java ---
-[INFO] Installing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/app-java-1.0-SNAPSHOT.jar to /home/ec2-user/.m2/repository/net/devops/training/app-java/1.0-SNAPSHOT/app-java-1.0-SNAPSHOT.jar
-[INFO] Installing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/pom.xml to /home/ec2-user/.m2/repository/net/devops/training/app-java/1.0-SNAPSHOT/app-java-1.0-SNAPSHOT.pom
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] Building JaCoco Multi Modules :: App IT 1.0-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ app-it ---
-[INFO] Deleting /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent (agent-for-ut) @ app-it ---
-[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/../target/jacoco-it.exec,append=true"
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ app-it ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/src/main/resources
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ app-it ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 1 source file to /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/classes
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ app-it ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/src/test/resources
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ app-it ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 1 source file to /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/test-classes
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ app-it ---
-[INFO] Surefire report directory: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running example.HelloWorldIntegrationTest
-coveredByIntegrationTest1
-coveredByIntegrationTest2
-coveredByIntegrationTest3
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.245 sec
-
-Results :
-
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ app-it ---
-[INFO] Building jar: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/app-it-1.0-SNAPSHOT.jar
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent-integration (agent-for-it) @ app-it ---
-[INFO] argLine set to "-javaagent:/home/ec2-user/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/../target/jacoco-it.exec,append=true"
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.7.8:report (jacoco-site) @ app-it ---
-[INFO] Skipping JaCoCo execution due to missing execution data file.
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.4:install (default-install) @ app-it ---
-[INFO] Installing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/target/app-it-1.0-SNAPSHOT.jar to /home/ec2-user/.m2/repository/net/devops/training/app-it/1.0-SNAPSHOT/app-it-1.0-SNAPSHOT.jar
-[INFO] Installing /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-it/pom.xml to /home/ec2-user/.m2/repository/net/devops/training/app-it/1.0-SNAPSHOT/app-it-1.0-SNAPSHOT.pom
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] Building Example of SonarQube Scanner for Maven + Code Coverage by UT and IT 1.0-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-[INFO] 
-[8mha:////4L4J2Fnz7yKh8jWpuUxyQgJdChgJTatUbAmgn1Qi7/L6AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- sonar-maven-plugin:3.3.0.603:sonar (default-cli) @ sonarqube-sbx-java ---
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/2.2/maven-dependency-tree-2.2.pom
-Progress (1): 2.3/7.3 kBProgress (1): 5.0/7.3 kBProgress (1): 7.3 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/2.2/maven-dependency-tree-2.2.pom (7.3 kB at 155 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/20/maven-shared-components-20.pom
-Progress (1): 2.3/5.1 kBProgress (1): 5.0/5.1 kBProgress (1): 5.1 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/20/maven-shared-components-20.pom (5.1 kB at 567 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/24/maven-parent-24.pom
-Progress (1): 1.4/37 kBProgress (1): 4.1/37 kBProgress (1): 6.9/37 kBProgress (1): 9.6/37 kBProgress (1): 12/37 kB Progress (1): 15/37 kBProgress (1): 18/37 kBProgress (1): 20/37 kBProgress (1): 23/37 kBProgress (1): 26/37 kBProgress (1): 29/37 kBProgress (1): 32/37 kBProgress (1): 34/37 kBProgress (1): 37/37 kBProgress (1): 37 kB                      Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/24/maven-parent-24.pom (37 kB at 3.4 MB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/apache/14/apache-14.pom
-Progress (1): 2.8/15 kBProgress (1): 5.5/15 kBProgress (1): 8.3/15 kBProgress (1): 11/15 kB Progress (1): 14/15 kBProgress (1): 15 kB                      Downloaded: https://repo.maven.apache.org/maven2/org/apache/apache/14/apache-14.pom (15 kB at 773 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/0.9.0.M2/aether-util-0.9.0.M2.pom
-Progress (1): 2.0 kB                    Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/0.9.0.M2/aether-util-0.9.0.M2.pom (2.0 kB at 407 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/0.9.0.M2/aether-0.9.0.M2.pom
-Progress (1): 2.3/28 kBProgress (1): 5.0/28 kBProgress (1): 7.8/28 kBProgress (1): 11/28 kB Progress (1): 13/28 kBProgress (1): 16/28 kBProgress (1): 19/28 kBProgress (1): 21/28 kBProgress (1): 24/28 kBProgress (1): 27/28 kBProgress (1): 28 kB                      Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/0.9.0.M2/aether-0.9.0.M2.pom (28 kB at 2.3 MB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.4/plexus-sec-dispatcher-1.4.pom
-Progress (1): 2.8/3.0 kBProgress (1): 3.0 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.4/plexus-sec-dispatcher-1.4.pom (3.0 kB at 148 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/api/sonar-scanner-api/2.9.0.887/sonar-scanner-api-2.9.0.887.pom
-Progress (1): 2.3/5.1 kBProgress (1): 5.0/5.1 kBProgress (1): 5.1 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/api/sonar-scanner-api/2.9.0.887/sonar-scanner-api-2.9.0.887.pom (5.1 kB at 281 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/api/sonar-scanner-api-parent/2.9.0.887/sonar-scanner-api-parent-2.9.0.887.pom
-Progress (1): 2.3/4.7 kBProgress (1): 4.7 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/api/sonar-scanner-api-parent/2.9.0.887/sonar-scanner-api-parent-2.9.0.887.pom (4.7 kB at 259 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/2.0.3/jsr305-2.0.3.pom
-Progress (1): 1.4 kB                    Downloaded: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/2.0.3/jsr305-2.0.3.pom (1.4 kB at 55 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/2.2/maven-dependency-tree-2.2.jar
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/0.9.0.M2/aether-util-0.9.0.M2.jar
-Downloading: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.4/plexus-sec-dispatcher-1.4.jar
-Downloading: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/api/sonar-scanner-api/2.9.0.887/sonar-scanner-api-2.9.0.887.jar
-Progress (1): 2.3/64 kBProgress (1): 5.0/64 kBProgress (1): 7.8/64 kBProgress (1): 11/64 kB Progress (1): 13/64 kBProgress (1): 16/64 kBProgress (2): 16/64 kB | 2.8/28 kBProgress (2): 16/64 kB | 5.5/28 kBProgress (2): 16/64 kB | 8.3/28 kBProgress (2): 16/64 kB | 11/28 kB Progress (2): 16/64 kB | 14/28 kBProgress (2): 16/64 kB | 16/28 kBProgress (2): 16/64 kB | 19/28 kBProgress (2): 16/64 kB | 22/28 kBProgress (2): 16/64 kB | 25/28 kBProgress (2): 16/64 kB | 27/28 kBProgress (2): 16/64 kB | 28 kB   Progress (2): 19/64 kB | 28 kBProgress (2): 21/64 kB | 28 kBProgress (2): 24/64 kB | 28 kBProgress (2): 27/64 kB | 28 kBProgress (2): 30/64 kB | 28 kBProgress (2): 32/64 kB | 28 kBProgress (2): 36/64 kB | 28 kBProgress (2): 40/64 kB | 28 kBProgress (2): 45/64 kB | 28 kBProgress (2): 49/64 kB | 28 kBProgress (2): 53/64 kB | 28 kBProgress (2): 57/64 kB | 28 kBProgress (2): 61/64 kB | 28 kBProgress (2): 64 kB | 28 kB                              Downloading: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/2.0.3/jsr305-2.0.3.jar
-Progress (3): 64 kB | 28 kB | 2.3/532 kBProgress (3): 64 kB | 28 kB | 5.0/532 kBProgress (3): 64 kB | 28 kB | 7.8/532 kBProgress (3): 64 kB | 28 kB | 11/532 kB Progress (3): 64 kB | 28 kB | 13/532 kBProgress (3): 64 kB | 28 kB | 16/532 kBProgress (3): 64 kB | 28 kB | 19/532 kBProgress (3): 64 kB | 28 kB | 21/532 kBProgress (3): 64 kB | 28 kB | 24/532 kBProgress (3): 64 kB | 28 kB | 27/532 kBProgress (3): 64 kB | 28 kB | 30/532 kBProgress (3): 64 kB | 28 kB | 32/532 kBProgress (3): 64 kB | 28 kB | 36/532 kBProgress (3): 64 kB | 28 kB | 40/532 kBProgress (3): 64 kB | 28 kB | 45/532 kBProgress (3): 64 kB | 28 kB | 49/532 kBProgress (3): 64 kB | 28 kB | 53/532 kBProgress (3): 64 kB | 28 kB | 57/532 kBProgress (3): 64 kB | 28 kB | 61/532 kBProgress (3): 64 kB | 28 kB | 65/532 kBProgress (3): 64 kB | 28 kB | 69/532 kBProgress (3): 64 kB | 28 kB | 73/532 kBProgress (3): 64 kB | 28 kB | 77/532 kBProgress (3): 64 kB | 28 kB | 81/532 kBProgress (3): 64 kB | 28 kB | 86/532 kBProgress (3): 64 kB | 28 kB | 90/532 kBProgress (3): 64 kB | 28 kB | 94/532 kBProgress (3): 64 kB | 28 kB | 98/532 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 2.3/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 5.0/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 7.8/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 11/134 kB Progress (4): 64 kB | 28 kB | 98/532 kB | 13/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 16/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 19/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 21/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 24/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 27/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 30/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 32/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 36/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 40/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 45/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 49/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 53/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 57/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 61/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 65/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 69/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 73/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 77/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 81/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 86/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 90/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 94/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 98/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 102/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 106/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 110/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 114/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 118/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 122/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 126/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 131/134 kBProgress (4): 64 kB | 28 kB | 98/532 kB | 134 kB                                                    Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/2.2/maven-dependency-tree-2.2.jar (64 kB at 471 kB/s)
-Downloaded: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.4/plexus-sec-dispatcher-1.4.jar (28 kB at 223 kB/s)
-Progress (2): 102/532 kB | 134 kBProgress (2): 106/532 kB | 134 kBProgress (2): 110/532 kB | 134 kBProgress (2): 114/532 kB | 134 kBProgress (2): 118/532 kB | 134 kBProgress (2): 122/532 kB | 134 kBProgress (2): 126/532 kB | 134 kBProgress (2): 131/532 kB | 134 kBProgress (2): 135/532 kB | 134 kBProgress (2): 139/532 kB | 134 kBProgress (2): 143/532 kB | 134 kBProgress (2): 147/532 kB | 134 kBProgress (2): 151/532 kB | 134 kBProgress (2): 155/532 kB | 134 kBProgress (2): 159/532 kB | 134 kBProgress (2): 163/532 kB | 134 kBProgress (2): 167/532 kB | 134 kBProgress (2): 172/532 kB | 134 kBProgress (2): 176/532 kB | 134 kBProgress (2): 180/532 kB | 134 kBProgress (2): 184/532 kB | 134 kBProgress (2): 188/532 kB | 134 kBProgress (2): 192/532 kB | 134 kBProgress (2): 196/532 kB | 134 kBProgress (2): 200/532 kB | 134 kBProgress (2): 204/532 kB | 134 kBProgress (2): 208/532 kB | 134 kBProgress (2): 212/532 kB | 134 kBProgress (2): 217/532 kB | 134 kBProgress (2): 221/532 kB | 134 kBProgress (2): 225/532 kB | 134 kBProgress (2): 229/532 kB | 134 kBProgress (2): 233/532 kB | 134 kBProgress (2): 237/532 kB | 134 kBProgress (2): 241/532 kB | 134 kBProgress (2): 245/532 kB | 134 kBProgress (2): 249/532 kB | 134 kBProgress (2): 253/532 kB | 134 kBProgress (2): 258/532 kB | 134 kBProgress (2): 262/532 kB | 134 kBProgress (2): 266/532 kB | 134 kBProgress (2): 270/532 kB | 134 kBProgress (2): 274/532 kB | 134 kBProgress (2): 278/532 kB | 134 kBProgress (2): 282/532 kB | 134 kBProgress (2): 286/532 kB | 134 kBProgress (2): 290/532 kB | 134 kBProgress (2): 294/532 kB | 134 kBProgress (2): 299/532 kB | 134 kBProgress (2): 303/532 kB | 134 kBProgress (2): 307/532 kB | 134 kBProgress (2): 311/532 kB | 134 kBProgress (2): 315/532 kB | 134 kBProgress (2): 319/532 kB | 134 kBProgress (2): 323/532 kB | 134 kBProgress (2): 327/532 kB | 134 kBProgress (2): 331/532 kB | 134 kBProgress (2): 335/532 kB | 134 kBProgress (2): 339/532 kB | 134 kBProgress (2): 344/532 kB | 134 kBProgress (2): 348/532 kB | 134 kBProgress (2): 352/532 kB | 134 kBProgress (2): 356/532 kB | 134 kBProgress (2): 360/532 kB | 134 kBProgress (2): 364/532 kB | 134 kBProgress (2): 368/532 kB | 134 kBProgress (2): 372/532 kB | 134 kBProgress (2): 376/532 kB | 134 kBProgress (2): 380/532 kB | 134 kBProgress (2): 385/532 kB | 134 kBProgress (2): 389/532 kB | 134 kBProgress (3): 389/532 kB | 134 kB | 2.5/33 kBProgress (3): 389/532 kB | 134 kB | 5.3/33 kBProgress (3): 389/532 kB | 134 kB | 6.6/33 kBProgress (3): 389/532 kB | 134 kB | 9.4/33 kBProgress (3): 389/532 kB | 134 kB | 11/33 kB Progress (3): 389/532 kB | 134 kB | 13/33 kBProgress (3): 389/532 kB | 134 kB | 15/33 kBProgress (3): 389/532 kB | 134 kB | 18/33 kBProgress (3): 389/532 kB | 134 kB | 20/33 kBProgress (3): 389/532 kB | 134 kB | 23/33 kBProgress (3): 389/532 kB | 134 kB | 26/33 kBProgress (3): 389/532 kB | 134 kB | 27/33 kBProgress (3): 389/532 kB | 134 kB | 30/33 kBProgress (3): 389/532 kB | 134 kB | 33/33 kBProgress (3): 389/532 kB | 134 kB | 33 kB   Progress (3): 393/532 kB | 134 kB | 33 kBProgress (3): 397/532 kB | 134 kB | 33 kBProgress (3): 401/532 kB | 134 kB | 33 kBProgress (3): 405/532 kB | 134 kB | 33 kBProgress (3): 409/532 kB | 134 kB | 33 kBProgress (3): 413/532 kB | 134 kB | 33 kBProgress (3): 417/532 kB | 134 kB | 33 kBProgress (3): 421/532 kB | 134 kB | 33 kBProgress (3): 425/532 kB | 134 kB | 33 kBProgress (3): 430/532 kB | 134 kB | 33 kBProgress (3): 434/532 kB | 134 kB | 33 kBProgress (3): 438/532 kB | 134 kB | 33 kBProgress (3): 442/532 kB | 134 kB | 33 kBProgress (3): 446/532 kB | 134 kB | 33 kBProgress (3): 450/532 kB | 134 kB | 33 kBProgress (3): 454/532 kB | 134 kB | 33 kBProgress (3): 458/532 kB | 134 kB | 33 kBProgress (3): 462/532 kB | 134 kB | 33 kBProgress (3): 466/532 kB | 134 kB | 33 kBProgress (3): 471/532 kB | 134 kB | 33 kBProgress (3): 475/532 kB | 134 kB | 33 kBProgress (3): 479/532 kB | 134 kB | 33 kBProgress (3): 483/532 kB | 134 kB | 33 kBProgress (3): 487/532 kB | 134 kB | 33 kBProgress (3): 491/532 kB | 134 kB | 33 kBProgress (3): 495/532 kB | 134 kB | 33 kBProgress (3): 499/532 kB | 134 kB | 33 kBProgress (3): 503/532 kB | 134 kB | 33 kBProgress (3): 507/532 kB | 134 kB | 33 kBProgress (3): 512/532 kB | 134 kB | 33 kBProgress (3): 516/532 kB | 134 kB | 33 kBProgress (3): 520/532 kB | 134 kB | 33 kBProgress (3): 524/532 kB | 134 kB | 33 kBProgress (3): 528/532 kB | 134 kB | 33 kBProgress (3): 532/532 kB | 134 kB | 33 kBProgress (3): 532 kB | 134 kB | 33 kB                                         Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/0.9.0.M2/aether-util-0.9.0.M2.jar (134 kB at 675 kB/s)
-Downloaded: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/2.0.3/jsr305-2.0.3.jar (33 kB at 188 kB/s)
-Downloaded: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/api/sonar-scanner-api/2.9.0.887/sonar-scanner-api-2.9.0.887.jar (532 kB at 2.5 MB/s)
-[INFO] User cache: /home/ec2-user/.sonar/cache
-[INFO] Load global repositories
-[INFO] Load global repositories (done) | time=461ms
-[INFO] User cache: /home/ec2-user/.sonar/cache
-[INFO] Load plugins index
-[INFO] Load plugins index (done) | time=25ms
-[INFO] SonarQube version: 6.0
-[INFO] Default locale: "en_US", source code encoding: "UTF-8"
-[INFO] Process project properties
-[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] /!\ A multi-module project can't have source folders, so '/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java' won't be used for the analysis. If you want to analyse files of this folder, you should create another sub-module and move them inside it.
-[INFO] Load project repositories
-[INFO] Load project repositories (done) | time=298ms
-[INFO] Load quality profiles
-[8mha:////4DLaJwWRf2f9hqaDc6l6y/s3ENU11UvfpG+QeEq/QIEZAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Ability to set quality profile from command line using 'sonar.profile' is deprecated and will be dropped in a future SonarQube version. Please configure quality profile used by your project on SonarQube server.
-[INFO] Load quality profiles (done) | time=288ms
-[INFO] Load active rules
-[INFO] Load active rules (done) | time=1360ms
-[INFO] Publish mode
-[INFO] -------------  Scan sonarqube-sbx-java
-[INFO] Load server rules
-[INFO] Load server rules (done) | time=337ms
-[INFO] Base dir: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java
-[INFO] Working dir: /opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java/target/sonar
-[INFO] Source paths: .
-[INFO] Test paths: src/test/java
-[INFO] Source encoding: UTF-8, default locale: en_US
-[INFO] Index files
-[INFO] ------------------------------------------------------------------------
-[INFO] Reactor Summary:
-[INFO] 
-[INFO] Example of SonarQube Scanner for Maven + Code Coverage by UT and IT FAILURE [  6.754 s]
-[INFO] Java :: JaCoco Multi Modules :: App ................ SUCCESS [  3.863 s]
-[INFO] JaCoco Multi Modules :: App IT ..................... SUCCESS [  1.125 s]
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 14.855 s
-[INFO] Finished at: 2017-09-25T20:46:10-04:00
-[INFO] Final Memory: 67M/162M
-[INFO] ------------------------------------------------------------------------
-[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Failed to execute goal org.sonarsource.scanner.maven:sonar-maven-plugin:3.3.0.603:sonar (default-cli) on project sonarqube-sbx-java: File [moduleKey=net.devops.training:app-java, relative=src/test/java/example/HelloWorldUnitTest.java, basedir=/opt/jenkins/workspace/Java DevOps/complex-sbx-webapp-sonarqubescan/sonarqube-sbx-java/app-java] can't be indexed twice. Please check that inclusion/exclusion patterns produce disjoint sets for main and test files -> [Help 1]
-[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
-[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
-[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[8mha:////4ODJODWCx60b4OY+emzwAMSfcL+XZa30BzYNIg+ufnlpAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
-Build step 'Invoke top-level Maven targets' marked build as failure
-Finished: FAILURE
